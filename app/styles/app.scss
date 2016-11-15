@@ -1,6 +1,8 @@
 
 // Bootstrap Variables
 $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
+// $grid-gutter-width:         10px !default;
+
 
 // Import Bootstrap
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
@@ -46,4 +48,44 @@ background-color:rgba(0, 0, 0, 0.4);
 }
 .login-title{
   color: white;
+}
+
+.nav-head{
+  .navbar-brand{
+    font-size: 30px;
+  }
+  .land-nav{
+    // width: 100%
+  }
+}
+.pictures{
+  background-color: white;
+}
+.addform{
+  margin-top: 100px;
+  background-color:rgba(0, 0, 0, 0.6)
+}
+.add-new{
+  background-image: url('../images/add.jpg');
+  height: 750px;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .new-heading{
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+    text-transform:uppercase;
+
+  }
+  .add-btn{
+   margin-top: 70px;
+  }
+  .labels{
+    color: white;
+    font-family: 'Electrolize', sans-serif;
+  }
+  #itemDescription{
+    color: wheat;
+  }
 }

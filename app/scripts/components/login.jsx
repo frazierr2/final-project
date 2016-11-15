@@ -144,7 +144,7 @@ var LoginContainer = React.createClass({
       localStorage.setItem('username', response.username);
       localStorage.setItem('token', response.sessionToken);
       if (response.sessionToken) {
-        self.props.router.navigate('testing/', {trigger: true});
+        self.props.router.navigate('landing/', {trigger: true});
       };
     });
   },

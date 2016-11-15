@@ -6,25 +6,16 @@ var Backbone = require('backbone');
 
 //LOCAL IMPORTS
 var LoginContainer = require('./components/login.jsx').LoginContainer;
-var Testing = require('./components/testing.jsx').Testing;
+var LandingContainer = require('./components/landing.jsx').LandingContainer;
 // var setupParse = require('./parseUtilities.js').setupParse;
 
 
 var AppRouter = Backbone.Router.extend({
   routes: {
-    '': 'index',
-    'testing/': 'testing'
+    // '': 'index',
+    'landing/': 'landing'
   },
 
-  // initialize: function(){
-  //   setupParse('ryansparseserver', 'ryansapikey');
-  // },
-  //
-  // sessionTokenCheck: function(){
-  //   if(!localStorage.getItem('sessionToken')){
-  //     this.navigate('', {trigger: true});
-  //   }
-  // },
 
   index: function(){
     ReactDOM.render(
@@ -33,9 +24,9 @@ var AppRouter = Backbone.Router.extend({
     );
   },
 
-  testing: function(){
+  landing: function(){
     ReactDOM.render(
-      React.createElement(Testing),
+      React.createElement(LandingContainer, {router: this}),
       document.getElementById('app')
     );
   }
