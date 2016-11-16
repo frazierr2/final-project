@@ -9,7 +9,7 @@ var UsersCollection = Backbone.Collection.extend({
   url: 'https://thefraz.herokuapp.com/classes/User'
 });
 
-module.exorts = {
+module.exports = {
   Users: Users,
   UsersCollection: UsersCollection
 };

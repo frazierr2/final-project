@@ -5,8 +5,8 @@ var $ = require('jquery');
 var AddNewTemplate = React.createClass({
   render: function(){
     return(
-      <div className="container add-new">
-        <div className="row">
+      <div className="container-fluid ">
+        <div className="row add-new">
           <div className="well col-md-8 col-md-offset-2 addform">
             <h1 className="new-heading">Grub Experience</h1>
             <form>

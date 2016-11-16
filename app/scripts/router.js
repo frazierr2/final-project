@@ -11,7 +11,7 @@ var NewRestaurant = require('./components/newPost.jsx').NewRestaurant;
 
 var AppRouter = Backbone.Router.extend({
   routes: {
-    // '': 'index',
+    '': 'index',
     'landing/': 'landing',
     'newpost/': 'newpost'
   },
