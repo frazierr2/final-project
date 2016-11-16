@@ -7,13 +7,13 @@ var Backbone = require('backbone');
 //LOCAL IMPORTS
 var LoginContainer = require('./components/login.jsx').LoginContainer;
 var LandingContainer = require('./components/landing.jsx').LandingContainer;
-// var setupParse = require('./parseUtilities.js').setupParse;
-
+var NewRestaurant = require('./components/newPost.jsx').NewRestaurant;
 
 var AppRouter = Backbone.Router.extend({
   routes: {
     // '': 'index',
-    'landing/': 'landing'
+    'landing/': 'landing',
+    'newpost/': 'newpost'
   },
 
 
@@ -29,6 +29,13 @@ var AppRouter = Backbone.Router.extend({
       React.createElement(LandingContainer, {router: this}),
       document.getElementById('app')
     );
+  },
+
+  newpost: function(){
+    ReactDOM.render(
+      React.createElement(NewRestaurant, {router: this}),
+      document.getElementById('app')
+    )
   }
 });
 

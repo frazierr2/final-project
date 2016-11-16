@@ -63,7 +63,7 @@ background-color:rgba(0, 0, 0, 0.4);
 }
 .addform{
   margin-top: 100px;
-  background-color:rgba(0, 0, 0, 0.6)
+  background-color:rgba(0, 0, 0, 0.6);
 }
 .add-new{
   background-image: url('../images/add.jpg');
@@ -88,4 +88,29 @@ background-color:rgba(0, 0, 0, 0.4);
   #itemDescription{
     color: wheat;
   }
+}
+.logo{
+  font-family: 'Rock Salt', cursive;
+}
+.nav-tabs{
+  color: white;
+}
+#testing{
+  color: gold;
+}
+.landing-background{
+  background-image: url('../images/background.jpeg');
+}
+.col-right{
+  background-color:rgba(0, 0, 0, 0.3)
+}
+.col-left{
+  text-align: center;
+  font-family: 'Iceland', cursive;
+  font-size: 75px;
+  color: white;
+  text-decoration: underline;
+}
+.listing-box{
+  background-color:rgba(0, 0, 0, 0.3)
 }

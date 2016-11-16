@@ -6,15 +6,15 @@ var LandingTemplate = React.createClass({
   render: function(){
     return(
       <div className="container-fluid">
-        <div className="row">
+        <div className="row landing-background">
           <div className="nav-head">
             <ul className="nav nav-pills navbar-inverse land-nav">
               <div className="navbar-header">
-                <a className="navbar-brand" href="#">U-Grub</a>
+                <a id="testing"className="navbar-brand logo testing" href="#landing/">U-Grub</a>
               </div>
-              <li role="presentation" className="active"><a href="#landing/">Home</a></li>
-              <li role="presentation"><a href="#">Add Restaurant</a></li>
-              <li role="presentation"><a href="#">Messages</a></li>
+              <li role="presentation"><a className="nav-tabs" href="#landing/">Home</a></li>
+              <li role="presentation"><a className="nav-tabs" href="#newpost/">Add Restaurant</a></li>
+              <li role="presentation"><a className="nav-tabs" href="#">Messages</a></li>
             </ul>
           </div>
           <br />
@@ -22,13 +22,13 @@ var LandingTemplate = React.createClass({
             <div className="row">
 
               <div className="col-md-6">
-              <div className="col-md-12 well">
-                testing
+              <div className="col-md-12 well listing-box">
+                <h1 className="col-left">Grub Listing</h1>
               </div>
               </div>
 
               <div className="col-md-6">
-              <div className="col-md-12 well">
+              <div className="col-md-12 well col-right">
                 <div className="col-md-6 well-sm">
                 <div className="col-md-12 well well-sm pictures">
                   <div className="pic-one">
