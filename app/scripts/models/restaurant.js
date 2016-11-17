@@ -10,8 +10,10 @@ var RestaurantCollection = Backbone.Collection.extend({
   url: 'https://thefraz.herokuapp.com/classes/Restaurant',
 
   parse: function(data){
+      // console.log(data.results);
     return data.results;
   }
+
 });
 
 module.exports = {

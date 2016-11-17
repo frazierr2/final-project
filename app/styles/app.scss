@@ -110,7 +110,25 @@ background-color:rgba(0, 0, 0, 0.4);
   font-size: 75px;
   color: white;
   text-decoration: underline;
+
 }
 .listing-box{
-  background-color:rgba(0, 0, 0, 0.3)
+  background-color:rgba(0, 0, 0, 0.3);
+}
+.ListHeading{
+  text-align: center;
+  background-color:rgba(0, 0, 0, 0.5);
+  color: gold;
+  font-size: 60px;
+  font-family: 'Reenie Beanie', cursive;
+}
+#grubListingInfo{
+  text-align: center;
+  color: white;
+}
+.restDetail{
+  background-image: url('../images/menu.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 750px;
 }

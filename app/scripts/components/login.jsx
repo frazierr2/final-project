@@ -51,7 +51,7 @@ var Login = React.createClass({
     };
     this.props.signUp(userData);
 
-    Backbone.history.navigate('', {trigger: true});
+    Backbone.history.navigate('landing/', {trigger: true});
   },
 
   openModal: function() {
