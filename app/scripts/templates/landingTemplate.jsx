@@ -14,7 +14,7 @@ var LandingTemplate = React.createClass({
               </div>
               <li role="presentation"><a className="nav-tabs" href="#landing/">Home</a></li>
               <li role="presentation"><a className="nav-tabs" href="#newpost/">Add Restaurant</a></li>
-              <li role="presentation"><a className="nav-tabs" href="#">Messages</a></li>
+              <li role="presentation"><a className="nav-tabs" href="#">Search Local Eateries</a></li>
             </ul>
           </div>
           <br />

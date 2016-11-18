@@ -7,6 +7,7 @@ var AddNewTemplate = require('../templates/addTemplate.jsx').AddNewTemplate;
 var models = require('../models/restaurant.js');
 
 
+
 var RestaurantForm = React.createClass({
   getInitialState: function(){
     var name = '';
@@ -115,7 +116,7 @@ var RestaurantForm = React.createClass({
               <p id="itemDescription" className="form-text text-muted">
                 Enter what you ate below and if you want to add more than one simply press the add button to add a new field
               </p>
-              <input onChange={self.setRestaurantFood} value={self.state.food}  className="form-control form-control-lg " type="text" placeholder=""/>
+              <input onChange={self.setRestaurantFood}  value={self.state.food} className="form-control form-control-lg " type="text" placeholder=""/>
             </div>
             <a className="btn btn-danger add-btn" href="#" role="button">+</a>
             </div>
