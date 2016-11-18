@@ -59,6 +59,10 @@ var RestaurantForm = React.createClass({
 
   handleSubmit: function(e){
     e.preventDefault();
+    // $(document).on('click', '#addButton',function(){
+    //   var newItem = document.createElement('input');
+    //   $('#addItem').append('<input class="form-control form-control-lg " />');
+    // });
 
     var newRestaurant = {
       name: this.state.name,
@@ -70,6 +74,14 @@ var RestaurantForm = React.createClass({
     };
     this.props.handleSubmit(newRestaurant);
   },
+
+  // handleAddInput: function(e){
+  //   e.preventDefault();
+  //   $(document).on('click', '#addButton',function(){
+  //     var newItem = document.createElement('input');
+  //     $('#addItem').append('<input class="form-control form-control-lg " />');
+  //   });
+  // },
 
     render: function(){
       var self = this;
@@ -111,14 +123,16 @@ var RestaurantForm = React.createClass({
               </select>
             </div>
             <div className="row">
-            <div className="col-xs-10">
+            <div id="addItem" className="col-xs-10 ">
               <label className="labels" htmlFor="menuitem">What did you eat</label>
               <p id="itemDescription" className="form-text text-muted">
                 Enter what you ate below and if you want to add more than one simply press the add button to add a new field
               </p>
-              <input onChange={self.setRestaurantFood}  value={self.state.food} className="form-control form-control-lg " type="text" placeholder=""/>
+
+             <input id="foodItem" onChange={self.setRestaurantFood}  value={self.state.food} className="form-control form-control-lg " type="text" placeholder=""/>
+
             </div>
-            <a className="btn btn-danger add-btn" href="#" role="button">+</a>
+            <a  id="addButton" className="btn btn-danger add-btn"  role="button">+</a>
             </div>
             <div className="form-group">
               <label className="labels" htmlFor="additionalinfo">Additional information about your experience</label>
@@ -139,11 +153,26 @@ var NewRestaurantContainer = React.createClass({
     };
   },
 
+  componentWillMount: function(){
+      var self = this;
+      var collection = this.state.restaurant;
+      collection.fetch().then(function(){
+        self.setState({collection: collection});
+      });
+      // console.log(collection);
+  },
+
   handleSubmit: function(newRestaurant){
     this.state.restaurant.save(newRestaurant);
     Backbone.history.navigate('landing/', {trigger: true});
   },
 
+  addFoodItem: function(){
+    var restaurant = this.state.restaurant;
+    var currentCounter = this.state.counter;
+    
+
+  },
 
   render: function(){
     return(
@@ -157,3 +186,4 @@ var NewRestaurantContainer = React.createClass({
 module.exports = {
   NewRestaurantContainer: NewRestaurantContainer
 }
+//
