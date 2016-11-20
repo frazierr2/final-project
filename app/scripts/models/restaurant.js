@@ -2,7 +2,9 @@ var Backbone = require('backbone');
 
 var Restaurant = Backbone.Model.extend({
  idAttribute: 'objectId',
- urlRoot: 'https://thefraz.herokuapp.com/classes/Restaurant'
+ urlRoot: 'https://thefraz.herokuapp.com/classes/Restaurant',
+
+
 });
 
 var RestaurantCollection = Backbone.Collection.extend({
@@ -10,10 +12,9 @@ var RestaurantCollection = Backbone.Collection.extend({
   url: 'https://thefraz.herokuapp.com/classes/Restaurant',
 
   parse: function(data){
-      // console.log(data.results);
+      // console.log('results', data.results);
     return data.results;
   }
-
 });
 
 module.exports = {
