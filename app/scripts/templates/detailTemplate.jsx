@@ -3,25 +3,33 @@ var Backbone = require('backbone');
 var $ = require('jquery');
 
 var DetailTemplate = React.createClass({
+  logout: function(){
+    $.post('https://thefraz.herokuapp.com/logout/').then(function(){
+      localStorage.clear();
+    });
+  },
   render: function(){
     return(
-      <div class="container-fluid restDetail">
-        <div class="row">
+      <div className="container-fluid restDetail">
+        <div className="nav-head">
+          <ul className="nav nav-pills navbar-inverse land-nav">
+            <div className="navbar-header">
+              <a id="testing"className="navbar-brand logo testing" href="#landing/">U-Grub</a>
+            </div>
+            <li role="presentation"><a className="nav-tabs" href="#landing/">Home</a></li>
+            <li role="presentation"><a className="nav-tabs" href="#newpost/">Add Restaurant</a></li>
+            <li role="presentation"><a className="nav-tabs" href="#">Search Local Eateries</a></li>
+            <li role="presentation"><a onClick={this.logout} className="nav-tabs logout" href="#">Logout</a></li>
+          </ul>
+
+        </div>
+        <br />
+        <div className="row">
+
           {this.props.children}
-          // <div class="col-md-10 col-md-offset-1 well detail">
-          //   <h1></h1>
-          //   <h3 class="well detailItem">Restaurant name:</h3>
-          //   <h3 class="well">How was it priced&#63;</h3>
-          //   <h3 class="well">How was the service&#63;</h3>
-          //   <h3 class="well">Are we attending again&#63;</h3>
-          //   <h3 class="well">I ate:</h3>
-          //   <h3 class="well">Additional info:</h3>
-          // </div>
 
         </div>
       </div>
-
-
     )
   }
 });

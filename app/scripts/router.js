@@ -13,7 +13,7 @@ var RestaurantDetailContainer = require('./components/restaurantDetail.jsx').Res
 
 var AppRouter = Backbone.Router.extend({
   routes: {
-    // '': 'index',
+    '': 'index',
     'landing/': 'landing',
     'restaurant/:id/': 'restaurantDetail',
     'newpost/': 'newpost'

@@ -14,11 +14,7 @@ var File = Backbone.Model.extend({
 
     this.set(attributes);
 
-    var image = this.get('data');  // image data
-
-    // if(!image){
-    //   throw 'Hey! You need to attach a file object to the data property';
-    // }
+    var image = this.get('data'); 
 
     options.data = image;
     options.beforeSend = function(request) {

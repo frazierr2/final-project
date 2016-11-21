@@ -10,7 +10,7 @@ var ListItem = React.createClass({
     render: function(){
       var restaurant = this.props.restaurant;
       return(
-      <a href={'#restaurant/' + restaurant.get('objectId')}><h3 className="ListHeading well">{restaurant.get('name')}</h3></a>
+      <a href={'#restaurant/' + restaurant.get('objectId') + '/'}><h3 className="ListHeading well">{restaurant.get('name')}</h3></a>
       )
     }
 });
@@ -40,6 +40,10 @@ var LandingContainer = React.createClass({
     var self = this;
     var collection = this.state.collection;
     // console.log(collection);
+
+    var user = localStorage.getItem('username');
+    collection.objectId = user;
+
     collection.fetch().then(function(){
       self.setState({collection: collection});
     });

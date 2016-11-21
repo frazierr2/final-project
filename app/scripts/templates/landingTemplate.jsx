@@ -3,6 +3,11 @@ var Backbone = require('backbone');
 var $ = require('jquery');
 
 var LandingTemplate = React.createClass({
+  logout: function(){
+    $.post('https://thefraz.herokuapp.com/logout/').then(function(){
+      localStorage.clear();
+    });
+  },
   render: function(){
     return(
       <div className="container-fluid">
@@ -15,7 +20,9 @@ var LandingTemplate = React.createClass({
               <li role="presentation"><a className="nav-tabs" href="#landing/">Home</a></li>
               <li role="presentation"><a className="nav-tabs" href="#newpost/">Add Restaurant</a></li>
               <li role="presentation"><a className="nav-tabs" href="#">Search Local Eateries</a></li>
+              <li role="presentation"><a onClick={this.logout} className="nav-tabs logout" href="#">Logout</a></li>
             </ul>
+
           </div>
           <br />
 

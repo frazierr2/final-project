@@ -141,7 +141,8 @@ var LoginContainer = React.createClass({
     var url = 'https://thefraz.herokuapp.com/';
 
     $.ajax(url + 'login?username=' + username + '&password=' + password).then(function(response){
-      localStorage.setItem('username', response.username);
+      // console.log(response.objectId);
+      localStorage.setItem('username', response.objectId);
       localStorage.setItem('token', response.sessionToken);
       if (response.sessionToken) {
         self.props.router.navigate('landing/', {trigger: true});

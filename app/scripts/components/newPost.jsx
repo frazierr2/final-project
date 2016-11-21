@@ -62,34 +62,35 @@ var RestaurantForm = React.createClass({
     e.preventDefault();
     var picture = $('#inputFile')[0].files[0];
     var file = new FileModel();
-    file.set('fileName', picture.fileName);
+    file.set('name', picture.name);
     file.set('data', picture);
-    file.save().done(function(){
+    file.save().done(() =>{
       console.log(file);
+      var newRestaurant = {
+        name: this.state.name,
+        cost: this.state.cost,
+        quality: this.state.quality,
+        attend: this.state.attend,
+        food: this.state.food,
+        additional: this.state.additional,
+        photo: file.get('url')
+      };
+      this.props.handleSubmit(newRestaurant);
     });
 
-    var newRestaurant = {
-      name: this.state.name,
-      cost: this.state.cost,
-      quality: this.state.quality,
-      attend: this.state.attend,
-      food: this.state.food,
-      additional: this.state.additional
-    };
-    this.props.handleSubmit(newRestaurant);
+
   },
-
-
 
     render: function(){
       var self = this;
       return(
+
         <div className="well col-md-8 col-md-offset-2 addform">
           <h1 className="new-heading">Grub Experience</h1>
           <form onSubmit={self.handleSubmit} action="/dist/" method="POST" encType="multipart/form-data">
             <div className="form-group">
               <label  className="labels"htmlFor="rest-name">Restaurant Name</label>
-              <input onChange={self.setRestaurantName} value={self.state.name} type="text" className="form-control" id="rest-name" placeholder="Where'd you grub?" />
+              <input onChange={self.setRestaurantName} value={self.state.name} type="text" className="form-control input-font" id="rest-name" placeholder="Where'd you grub?" />
             </div>
             <div className="col-xs-4">
               <label className="labels">Average Cost</label>
@@ -120,26 +121,22 @@ var RestaurantForm = React.createClass({
                 <option>Yes</option>
               </select>
             </div>
-            <div className="row">
-            <div id="addItem" className="col-xs-10 ">
+
+            <div id="addItem" >
               <label className="labels" htmlFor="menuitem">What did you eat</label>
               <p id="itemDescription" className="form-text text-muted">
-                Enter what you ate below and if you want to add more than one simply press the add button to add a new field
+                Enter what you had to eat below seperated by commas.
               </p>
-
-             <input id="foodItem" onChange={self.setRestaurantFood}  value={self.state.food} className="form-control form-control-lg " type="text" placeholder=""/>
-
+             <input id="foodItem" onChange={self.setRestaurantFood}  value={self.state.food} className="form-control form-control-lg input-font" type="text" placeholder=""/><br/>
             </div>
-            <a  id="addButton" className="btn btn-danger add-btn"  role="button">+</a>
-            </div>
+
             <div className="form-group">
               <label className="labels" htmlFor="additionalinfo">Additional information about your experience</label>
-              <textarea onChange={self.setRestaurantAdditional} value={self.state.additional}  className="form-control" id="additionalinfo" rows="5"></textarea>
+              <textarea onChange={self.setRestaurantAdditional} value={self.state.additional}  className="form-control input-font" id="additionalinfo" rows="5"></textarea>
             </div>
             <div>
-              <label className="labels" htmlFor="inputFile">Include a pictures!</label><br/>
+              <label className="labels" htmlFor="inputFile">Include a picture!</label><br/>
               <small id="fileHelp" className="form-text text-muted help-text">PLEASE TAKE AND INCLUDE A PICTURE OF THE RESTAURANT OR MENU</small><br/>
-              <input type="text" className="col-xs-4" id="fileName" name="fileName" placeholder="File Name"/>
                <input type="file" className="col-xs-4 form-control-file" id="inputFile" aria-describedby="fileHelp" />
             </div>
             <button type="submit" className="btn btn-info btn-lg btn-block form-button">Add Restaurant</button>
@@ -159,13 +156,20 @@ var NewRestaurantContainer = React.createClass({
 
   componentWillMount: function(){
       var self = this;
-      var collection = this.state.restaurant;
-      collection.fetch().then(function(){
-        self.setState({collection: collection});
-      });
+      // var collection = this.state.restaurant;
+      // collection.fetch().then(function(){
+      //   self.setState({collection: collection});
+      // });
   },
 
   handleSubmit: function(newRestaurant){
+    console.log(this.state.restaurant);
+    // var currentUser = User.current();
+    this.state.restaurant.set('name', newRestaurant.name);
+    var user = localStorage.getItem('username');
+    // console.log(localStorage.getItem('username'));
+    this.state.restaurant.set('user', {'__type': 'Pointer', 'className': '_User', 'objectId': user});
+
     this.state.restaurant.save(newRestaurant);
     Backbone.history.navigate('landing/', {trigger: true});
   },

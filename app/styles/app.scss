@@ -62,12 +62,12 @@ background-color:rgba(0, 0, 0, 0.4);
   background-color: white;
 }
 .addform{
-  margin-top: 100px;
+  margin-top: 30px;
   background-color:rgba(0, 0, 0, 0.6);
 }
 .add-new{
   background-image: url('../images/add.jpg');
-  height: 750px;
+  height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -76,7 +76,8 @@ background-color:rgba(0, 0, 0, 0.4);
     text-align: center;
     text-decoration: underline;
     text-transform:uppercase;
-
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 50px;
   }
   .add-btn{
    margin-top: 70px;
@@ -106,7 +107,8 @@ background-color:rgba(0, 0, 0, 0.4);
 }
 .col-left{
   text-align: center;
-  font-family: 'Iceland', cursive;
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight: bold;
   font-size: 75px;
   color: white;
   text-decoration: underline;
@@ -130,7 +132,7 @@ background-color:rgba(0, 0, 0, 0.4);
   background-image: url('../images/menu.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 750px;
+  height: 100%;
 }
 .help-text{
   color: wheat;
@@ -142,7 +144,30 @@ background-color:rgba(0, 0, 0, 0.4);
   color: white;
 }
 .detail{
-  margin-top: 70px;
+  // margin-top: 70px;
   background-color:rgba(100, 100, 100, 0.3);
-
+  .detailItem-left{
+    text-decoration: underline;
+    text-transform: uppercase;
+    background-color:rgba(0, 0, 0, 0.7);
+    color: white;
+    font-family: 'Amatica SC', cursive;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .detailItem-right{
+    background-color:rgba(0, 0, 0, 0.6);
+    color: gold;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Amatica SC', cursive;
+  }
+}
+.logout{
+  color: gold;
+}
+.input-font{
+  font-family: 'Architects Daughter', cursive;
+  font-weight: bold;
+  font-size: 20px;
 }
