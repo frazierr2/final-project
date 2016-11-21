@@ -10,7 +10,7 @@ var ListItem = React.createClass({
     render: function(){
       var restaurant = this.props.restaurant;
       return(
-        <h3 className="ListHeading well">{restaurant.get('name')}</h3>
+      <a href={'#restaurant/' + restaurant.get('objectId')}><h3 className="ListHeading well">{restaurant.get('name')}</h3></a>
       )
     }
 });

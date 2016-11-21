@@ -5,30 +5,9 @@ var $ = require('jquery');
 
 var AddNewTemplate = require('../templates/addTemplate.jsx').AddNewTemplate;
 var models = require('../models/restaurant.js');
-var collection = require('../models/restaurant.js').RestaurantCollection;
-
-var Listing = React.createClass({
-  componentWillReceiveProps: function(newProps){
-      this.setState(newProps.food.toJSON());
-    },
-
-    handleInputChange: function(e){
-      var ingredientField = e.target;
+var FileModel = require('../models/file.js').File;
 
 
-      var newState = {};
-      newState[ingredientField.name] = ingredientField.value; // {'amount': 24}
-      this.setState(newState);
-      this.props.food.set(ingredientField.name, ingredientField.value);
-    },
-    render: function(){
-    return(
-
-      <input id="foodItem" onChange={this.handleInputChange} className="form-control form-control-lg " type="text" placeholder="" />
-
-    )
-  }
-});
 
 var RestaurantForm = React.createClass({
   getInitialState: function(){
@@ -81,7 +60,13 @@ var RestaurantForm = React.createClass({
 
   handleSubmit: function(e){
     e.preventDefault();
-
+    var picture = $('#inputFile')[0].files[0];
+    var file = new FileModel();
+    file.set('fileName', picture.fileName);
+    file.set('data', picture);
+    file.save().done(function(){
+      console.log(file);
+    });
 
     var newRestaurant = {
       name: this.state.name,
@@ -94,16 +79,9 @@ var RestaurantForm = React.createClass({
     this.props.handleSubmit(newRestaurant);
   },
 
-    render: function(){
-      var restaurant = this.props.restaurant;
-      // var heading = restaurant.isNew() ? 'Add' : 'Edit';
-      console.log(restaurant);
-      var lineFormset = restaurant.map(function(food){
-        return(
-          <Listing key={food.cid} food={food} />
 
-        )
-      });
+
+    render: function(){
       var self = this;
       return(
         <div className="well col-md-8 col-md-offset-2 addform">
@@ -149,21 +127,22 @@ var RestaurantForm = React.createClass({
                 Enter what you ate below and if you want to add more than one simply press the add button to add a new field
               </p>
 
-              {lineFormset}
+             <input id="foodItem" onChange={self.setRestaurantFood}  value={self.state.food} className="form-control form-control-lg " type="text" placeholder=""/>
 
             </div>
-            <a onClick={self.props.addLine} id="addButton" className="btn btn-danger add-btn"  role="button">+</a>
+            <a  id="addButton" className="btn btn-danger add-btn"  role="button">+</a>
             </div>
             <div className="form-group">
               <label className="labels" htmlFor="additionalinfo">Additional information about your experience</label>
               <textarea onChange={self.setRestaurantAdditional} value={self.state.additional}  className="form-control" id="additionalinfo" rows="5"></textarea>
             </div>
             <div>
-              <label className="labels" htmlFor="inputFile">Include a pictures!</label>
-               <input type="file" className="form-control-file" id="inputFile" aria-describedby="fileHelp" />
-               <small id="fileHelp itemDescription" className="form-text text-muted">This is where you can include a picture of the restaurant or menu if you choose</small>
+              <label className="labels" htmlFor="inputFile">Include a pictures!</label><br/>
+              <small id="fileHelp" className="form-text text-muted help-text">PLEASE TAKE AND INCLUDE A PICTURE OF THE RESTAURANT OR MENU</small><br/>
+              <input type="text" className="col-xs-4" id="fileName" name="fileName" placeholder="File Name"/>
+               <input type="file" className="col-xs-4 form-control-file" id="inputFile" aria-describedby="fileHelp" />
             </div>
-            <button type="submit" className="btn btn-info btn-lg btn-block">Add Restaurant</button>
+            <button type="submit" className="btn btn-info btn-lg btn-block form-button">Add Restaurant</button>
           </form>
         </div>
       )
@@ -174,7 +153,7 @@ var RestaurantForm = React.createClass({
 var NewRestaurantContainer = React.createClass({
   getInitialState: function(){
     return{
-      restaurant: new collection()
+      restaurant: new models.Restaurant()
     };
   },
 
@@ -191,20 +170,13 @@ var NewRestaurantContainer = React.createClass({
     Backbone.history.navigate('landing/', {trigger: true});
   },
 
-  addLine: function(){
-    var restaurant = this.state.restaurant;
-    var currentCounter = this.state.counter;
-    var food = restaurant.get('food');
-    food.add([{}]);
-    restaurant.set("food", food);
-    this.setState({restaurant: restaurant});
-  },
+
   render: function(){
-    console.log('restaurant', this.state.restaurant);
+    // console.log('restaurant', this.state.restaurant);
     // console.log('restaurant2', this.state.restaurant.attributes.results);
     return(
       <AddNewTemplate>
-        <RestaurantForm restaurant={this.state.restaurant} addLine={this.addLine} handleSubmit={this.handleSubmit}/>
+        <RestaurantForm handleSubmit={this.handleSubmit}/>
       </AddNewTemplate>
     )
   }

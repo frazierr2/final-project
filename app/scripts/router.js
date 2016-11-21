@@ -9,11 +9,13 @@ var $ = require('jquery');
 var LoginContainer = require('./components/login.jsx').LoginContainer;
 var LandingContainer = require('./components/landing.jsx').LandingContainer;
 var NewRestaurantContainer = require('./components/newPost.jsx').NewRestaurantContainer;
+var RestaurantDetailContainer = require('./components/restaurantDetail.jsx').RestaurantDetailContainer;
 
 var AppRouter = Backbone.Router.extend({
   routes: {
-    '': 'index',
+    // '': 'index',
     'landing/': 'landing',
+    'restaurant/:id/': 'restaurantDetail',
     'newpost/': 'newpost'
   },
   ajaxSetup: function(token){
@@ -46,12 +48,21 @@ var AppRouter = Backbone.Router.extend({
     );
   },
 
+  restaurantDetail: function(restaurantId){
+    ReactDOM.render(
+      React.createElement(RestaurantDetailContainer, {restaurantId: restaurantId}),
+      document.getElementById('app')
+    )
+  },
+
   newpost: function(){
     ReactDOM.render(
       React.createElement(NewRestaurantContainer, {router: this}),
       document.getElementById('app')
     )
   }
+
+
 });
 
 var router = new AppRouter();
