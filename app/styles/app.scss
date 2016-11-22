@@ -171,3 +171,20 @@ background-color:rgba(0, 0, 0, 0.4);
   font-weight: bold;
   font-size: 20px;
 }
+.search-page{
+  background-image: url('../images/search.jpg');
+  height: 750px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .yelpframe{
+    background-color:rgba(0, 0, 0, 0.1);
+  }
+  .yelpgroup{
+    background-color:rgba(0, 0, 0, 0.5);
+  }
+  .yelpdata{
+    background-color:rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+  }
+}
