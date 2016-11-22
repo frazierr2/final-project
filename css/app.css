@@ -5797,4 +5797,144 @@ img {
 
 .login-title {
   color: white; }
+
+.nav-head .navbar-brand {
+  font-size: 30px; }
+
+.pictures {
+  background-color: white; }
+
+.addform {
+  margin-top: 30px;
+  background-color: rgba(0, 0, 0, 0.6); }
+
+.add-new {
+  background-image: url("../images/add.jpg");
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .add-new .new-heading {
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 50px; }
+  .add-new .add-btn {
+    margin-top: 70px; }
+  .add-new .labels {
+    color: white;
+    font-family: 'Electrolize', sans-serif; }
+  .add-new #itemDescription {
+    color: wheat; }
+
+.logo {
+  font-family: 'Rock Salt', cursive; }
+
+.nav-tabs {
+  color: white; }
+
+#testing {
+  color: gold; }
+
+.landing-background {
+  background-image: url("../images/background.jpeg"); }
+
+.col-right {
+  background-color: rgba(0, 0, 0, 0.3); }
+
+.col-left {
+  text-align: center;
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight: bold;
+  font-size: 75px;
+  color: white;
+  text-decoration: underline; }
+
+.listing-box {
+  background-color: rgba(0, 0, 0, 0.3); }
+
+.ListHeading {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: gold;
+  font-size: 60px;
+  font-family: 'Reenie Beanie', cursive; }
+
+#grubListingInfo {
+  text-align: center;
+  color: white; }
+
+.restDetail {
+  background-image: url("../images/menu.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%; }
+
+.help-text {
+  color: wheat; }
+
+.form-button {
+  margin-top: 50px; }
+
+#inputFile {
+  color: white; }
+
+.detail {
+  background-color: rgba(100, 100, 100, 0.3); }
+  .detail .detailItem-left {
+    text-decoration: underline;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-family: 'Amatica SC', cursive;
+    font-size: 40px;
+    font-weight: bold; }
+  .detail .detailItem-right {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: gold;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Amatica SC', cursive; }
+
+.logout {
+  color: gold; }
+
+.input-font {
+  font-family: 'Architects Daughter', cursive;
+  font-weight: bold;
+  font-size: 20px; }
+
+.search-page {
+  background-image: url("../images/search.jpg");
+  height: 750px;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .search-page .yelpframe {
+    background-color: rgba(100, 100, 100, 0.8); }
+  .search-page .yelpgroup {
+    background-color: rgba(0, 0, 0, 0.5); }
+  .search-page .yelpdata {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    text-align: center;
+    font-family: 'Amatica SC', cursive;
+    font-size: 30px; }
+
+.search-location {
+  background-image: url("../images/search.jpg");
+  height: 750px;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .search-location .location-search {
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-top: 200px;
+    color: white;
+    font-family: 'Amatica SC', cursive;
+    font-size: 30px;
+    font-weight: bolder; }
+  .search-location .search-input {
+    vertical-align: middle; }
+  .search-location .yelpSearchInput {
+    margin-top: 30px; }
 /*# sourceMappingURL=app.css.map */
