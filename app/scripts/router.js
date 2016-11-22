@@ -15,7 +15,7 @@ var SearchContainer = require('./components/searchlocal.jsx').SearchContainer;
 
 var AppRouter = Backbone.Router.extend({
   routes: {
-    '': 'index',
+    // '': 'index',
     'landing/': 'landing',
     'restaurant/:id/': 'restaurantDetail',
     'newpost/': 'newpost',

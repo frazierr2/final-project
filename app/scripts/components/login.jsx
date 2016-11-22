@@ -71,11 +71,11 @@ var Login = React.createClass({
           <form onSubmit={this.login}>
             <div className="form-group">
               <label className="label" htmlFor="username">USERNAME</label>
-              <input onChange={this.handleUsernameChange} type="text" className="form-control" id="username" placeholder="Enter Your Username" />
+              <input onChange={this.handleUsernameChange} type="text" className="form-control input-font" id="username" placeholder="Enter Your Username" />
             </div>
             <div className="form-group">
               <label className="label" htmlFor="loginPassword">PASSWORD</label>
-              <input onChange={this.handlePasswordChange} type="password" className="form-control" id="loginPassword" placeholder="Enter Your Password"/>
+              <input onChange={this.handlePasswordChange} type="password" className="form-control input-font" id="loginPassword" placeholder="Enter Your Password"/>
             </div>
             <div className="login-button">
               <button type="submit" className="btn btn-primary">Sign In</button>
@@ -94,11 +94,11 @@ var Login = React.createClass({
             <form onSubmit={this.signUp}>
               <div className="form-group">
                 <label className="label" htmlFor="username">USERNAME</label>
-                <input onChange={this.handleUsernameChange} type="text" className="form-control" id="username" placeholder="Enter A New Username" />
+                <input onChange={this.handleUsernameChange} type="text" className="form-control input-font" id="username" placeholder="Enter A New Username" />
               </div>
               <div className="form-group">
                 <label className="label" htmlFor="loginPassword">PASSWORD</label>
-                <input onChange={this.handlePasswordChange} type="password" className="form-control" id="loginPassword" placeholder="Enter A New Password"/>
+                <input onChange={this.handlePasswordChange} type="password" className="form-control input-font" id="loginPassword" placeholder="Enter A New Password"/>
               </div>
               <div className="login-button">
                 <button type="submit" className="btn btn-primary">Create Account</button>

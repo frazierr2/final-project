@@ -127,12 +127,12 @@ var RestaurantForm = React.createClass({
               <p id="itemDescription" className="form-text text-muted">
                 Enter what you had to eat below seperated by commas.
               </p>
-             <input id="foodItem" onChange={self.setRestaurantFood}  value={self.state.food} className="form-control form-control-lg input-font" type="text" placeholder=""/><br/>
+             <input id="foodItem" onChange={self.setRestaurantFood}  value={self.state.food} className="form-control form-control-lg input-font" type="text" placeholder="What did you eat?"/><br/>
             </div>
 
             <div className="form-group">
               <label className="labels" htmlFor="additionalinfo">Additional information about your experience</label>
-              <textarea onChange={self.setRestaurantAdditional} value={self.state.additional}  className="form-control input-font" id="additionalinfo" rows="5"></textarea>
+              <textarea onChange={self.setRestaurantAdditional} value={self.state.additional}  className="form-control input-font" id="additionalinfo" placeholder="Information about your experience" rows="5"></textarea>
             </div>
             <div>
               <label className="labels" htmlFor="inputFile">Include a picture!</label><br/>

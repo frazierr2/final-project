@@ -177,14 +177,37 @@ background-color:rgba(0, 0, 0, 0.4);
   background-repeat: no-repeat;
   background-size: cover;
   .yelpframe{
-    background-color:rgba(0, 0, 0, 0.1);
+    background-color:rgba(100, 100, 100, 0.8);
   }
   .yelpgroup{
     background-color:rgba(0, 0, 0, 0.5);
   }
   .yelpdata{
-    background-color:rgba(0, 0, 0, 0.5);
+    background-color:rgba(0, 0, 0, 0.3);
     color: white;
     text-align: center;
+    font-family: 'Amatica SC', cursive;
+    font-size: 30px;
   }
+
+}
+.search-location{
+  background-image: url('../images/search.jpg');
+  height: 750px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .location-search{
+    background-color:rgba(0, 0, 0, 0.7);
+    margin-top: 200px;
+    color: white;
+    font-family: 'Amatica SC', cursive;
+    font-size: 30px;
+    font-weight: bolder;
+  }
+  .search-input{
+    vertical-align: middle;
+  }
+ .yelpSearchInput{
+   margin-top: 30px;
+ }
 }
