@@ -5809,7 +5809,7 @@ img {
   background-color: rgba(0, 0, 0, 0.6); }
 
 .add-new {
-  background-image: url("../images/add.jpg");
+  background: url("../images/add.jpg") fixed;
   height: 100%;
   background-size: cover;
   background-repeat: no-repeat; }
@@ -5838,7 +5838,7 @@ img {
   color: gold; }
 
 .landing-background {
-  background-image: url("../images/background.jpeg"); }
+  background: url("../images/background.jpeg") fixed; }
 
 .col-right {
   background-color: rgba(0, 0, 0, 0.3); }
@@ -5866,7 +5866,7 @@ img {
   color: white; }
 
 .restDetail {
-  background-image: url("../images/menu.jpg");
+  background: url("../images/menu.jpg") fixed;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%; }
@@ -5906,7 +5906,7 @@ img {
   font-size: 20px; }
 
 .search-page {
-  background-image: url("../images/search.jpg");
+  background: url("../images/search.jpg") fixed;
   height: 750px;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -5922,7 +5922,7 @@ img {
     font-size: 30px; }
 
 .search-location {
-  background-image: url("../images/search.jpg");
+  background: url("../images/search.jpg") fixed;
   height: 750px;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -5937,4 +5937,13 @@ img {
     vertical-align: middle; }
   .search-location .yelpSearchInput {
     margin-top: 30px; }
+
+.uploadbox {
+  margin: 0 auto;
+  width: 550px; }
+
+.uploaded-pic {
+  width: 500px;
+  height: 333px; }
+
 /*# sourceMappingURL=app.css.map */
