@@ -18,7 +18,7 @@ var DetailTemplate = React.createClass({
             </div>
             <li role="presentation"><a className="nav-tabs" href="#landing/">Home</a></li>
             <li role="presentation"><a className="nav-tabs" href="#newpost/">Add Restaurant</a></li>
-            <li role="presentation"><a className="nav-tabs" href="#search/">Search Local Eateries</a></li>
+            <li role="presentation"><a className="nav-tabs" href="#presearch/">Search Local Eateries</a></li>
             <li role="presentation"><a onClick={this.logout} className="nav-tabs logout" href="#">Logout</a></li>
           </ul>
 

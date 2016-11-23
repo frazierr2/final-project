@@ -8,7 +8,7 @@ var SearchData = Backbone.Model.extend({
 
 var SearchCollection = Backbone.Collection.extend({
   model: SearchData,
-  url: 'https://tiy-yelp-server.herokuapp.com/search?term=restaurants&location=Greenville'
+  url: 'https://tiy-yelp-server.herokuapp.com/search'
 });
 
 module.exports = {

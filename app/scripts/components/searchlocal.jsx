@@ -62,8 +62,21 @@ var SearchContainer = React.createClass({
   },
 
   componentWillMount: function(){
+    this.getRestaurants(this.props.location);
+  },
+
+  componentWillReceiveProps: function(newProps){
+    this.getRestaurants(newProps.location);
+  },
+
+  getRestaurants: function(location){
     var collection = this.state.collection;
-    collection.fetch().then(() => {
+    collection.fetch({
+      data: {
+        term: 'restaurants',
+        'location': location
+      }
+    }).then(() => {
       this.setState({collection: collection})
     });
   },

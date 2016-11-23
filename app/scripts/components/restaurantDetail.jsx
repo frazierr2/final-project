@@ -26,6 +26,13 @@ var RestaurantHeading = React.createClass({
     return(
         <div className="col-md-10 col-md-offset-1 well detail">
           <div className="row">
+            <div>
+              <div className="well text-center uploadbox">
+                <img className="uploaded-pic"src={restaurant.get('photo')}></img>
+              </div>
+            </div>
+          </div>
+          <div className="row">
             <h3 className="well detailItem-left col-md-6 text-center"><strong>Restaurant name :</strong></h3>
             <h3 className="well detailItem-right col-md-6 text-center">{restaurant.get('name')}</h3>
           </div>
