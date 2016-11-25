@@ -363,7 +363,7 @@ var RestaurantForm = React.createClass({displayName: "RestaurantForm",
                 React.createElement("option", null, "Yes")
               )
             ), 
-
+            
             React.createElement("div", {id: "addItem"}, 
               React.createElement("label", {className: "labels", htmlFor: "menuitem"}, "What did you eat"), 
               React.createElement("p", {id: "itemDescription", className: "form-text text-muted"}, 

@@ -5820,8 +5820,8 @@ img {
     text-transform: uppercase;
     font-family: 'Alegreya Sans SC', sans-serif;
     font-size: 50px; }
-  .add-new .add-btn {
-    margin-top: 70px; }
+  .add-new #addItem {
+    margin-top: 100px; }
   .add-new .labels {
     color: white;
     font-family: 'Electrolize', sans-serif; }
