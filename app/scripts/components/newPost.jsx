@@ -121,7 +121,7 @@ var RestaurantForm = React.createClass({
                 <option>Yes</option>
               </select>
             </div>
-
+            
             <div id="addItem" >
               <label className="labels" htmlFor="menuitem">What did you eat</label>
               <p id="itemDescription" className="form-text text-muted">

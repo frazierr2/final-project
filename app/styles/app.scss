@@ -79,8 +79,11 @@ background-color:rgba(0, 0, 0, 0.4);
     font-family: 'Alegreya Sans SC', sans-serif;
     font-size: 50px;
   }
-  .add-btn{
-   margin-top: 70px;
+  // .add-btn{
+  //  margin-top: 70px;
+  // }
+  #addItem{
+    margin-top: 100px;
   }
   .labels{
     color: white;
@@ -176,7 +179,7 @@ background-color:rgba(0, 0, 0, 0.4);
   height: 750px;
   background-repeat: no-repeat;
   background-size: cover;
-  
+
   .yelpframe{
     background-color:rgba(100, 100, 100, 0.8);
   }
