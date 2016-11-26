@@ -1,6 +1,8 @@
 var React = require('react');
 var Backbone = require('backbone');
-var $ = require('jquery');
+var $ = window.jQuery = require('jquery');
+
+require('bootstrap-sass');
 
 var LandingTemplate = React.createClass({
   logout: function(){

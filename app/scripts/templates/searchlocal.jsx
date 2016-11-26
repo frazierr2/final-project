@@ -24,7 +24,7 @@ var SearchTemplate = React.createClass({
           </ul>
         </div>
         <div className="row">
-          <div className="search-page">
+          <div className="search-page clearfix">
 
             {this.props.children}
 
