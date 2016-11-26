@@ -65,7 +65,7 @@ var RestaurantForm = React.createClass({
     file.set('name', picture.name);
     file.set('data', picture);
     file.save().done(() =>{
-      console.log(file);
+      // console.log(file);
       var newRestaurant = {
         name: this.state.name,
         cost: this.state.cost,
@@ -121,7 +121,7 @@ var RestaurantForm = React.createClass({
                 <option>Yes</option>
               </select>
             </div>
-            
+
             <div id="addItem" >
               <label className="labels" htmlFor="menuitem">What did you eat</label>
               <p id="itemDescription" className="form-text text-muted">
@@ -156,10 +156,7 @@ var NewRestaurantContainer = React.createClass({
 
   componentWillMount: function(){
       var self = this;
-      // var collection = this.state.restaurant;
-      // collection.fetch().then(function(){
-      //   self.setState({collection: collection});
-      // });
+
   },
 
   handleSubmit: function(newRestaurant){
@@ -176,8 +173,7 @@ var NewRestaurantContainer = React.createClass({
 
 
   render: function(){
-    // console.log('restaurant', this.state.restaurant);
-    // console.log('restaurant2', this.state.restaurant.attributes.results);
+
     return(
       <AddNewTemplate>
         <RestaurantForm handleSubmit={this.handleSubmit}/>
