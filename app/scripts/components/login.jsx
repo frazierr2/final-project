@@ -79,12 +79,12 @@ var Login = React.createClass({
             </div>
             <div className="login-button">
               <button type="submit" className="btn btn-primary">Sign In</button>
-            </div>
+            </div><br/>
           </form>
         </div>
       </div>
       <div className=" create-account col-md-6 col-md-offset-3">
-      <button onClick={this.openModal} type="button" className="btn btn-secondary">Don't have an Account&#63; Click here to create one&#33;</button>
+      <button onClick={this.openModal} type="button" className="btn btn-primary">Don't have an Account&#63; Click here to create one&#33;</button>
       </div>
       {/*MODAL FOR CREATING NEW ACCOUNT*/}
       <Modal className="account-modal"isOpen={this.state.modalIsOpen}>
