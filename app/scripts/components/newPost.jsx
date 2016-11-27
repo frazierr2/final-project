@@ -135,8 +135,8 @@ var RestaurantForm = React.createClass({
               <textarea onChange={self.setRestaurantAdditional} value={self.state.additional}  className="form-control input-font" id="additionalinfo" placeholder="Information about your experience" rows="5"></textarea>
             </div>
             <div>
-              <label className="labels" htmlFor="inputFile">Include a picture!</label><br/>
-              <small id="fileHelp" className="form-text text-muted help-text">PLEASE TAKE AND INCLUDE A PICTURE OF THE RESTAURANT OR MENU</small><br/>
+              <label className="labels" htmlFor="inputFile">To create a new post include a photo!</label><br/>
+              <small id="fileHelp" className="form-text text-muted help-text">PLEASE TAKE AND INCLUDE A PICTURE OF THE RESTAURANT OR MENU TO CREATE A NEW ENTRY</small><br/>
                <input type="file" className="col-xs-4 form-control-file" id="inputFile" aria-describedby="fileHelp" />
             </div>
             <button type="submit" className="btn btn-info btn-lg btn-block form-button">Add Restaurant</button>
