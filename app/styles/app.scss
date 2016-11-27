@@ -172,9 +172,22 @@ background-color:rgba(0, 0, 0, 0.4);
   font-weight: bold;
   font-size: 20px;
 }
+.yelp-logo{
+  height: 60px;
+}
+.yelp-logo-2{
+  height: 40px;
+}
+.yelp-power{
+  font-size: 20px;
+}
+.yelp-search{
+  height: 60px;
+  width: 100px;
+  font-size: 30px;
+}
 .search-page{
   background: url('../images/search.jpg') fixed;
-  // height: 750px;
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -193,17 +206,15 @@ background-color:rgba(0, 0, 0, 0.4);
   }
 
 }
-// .fixed-nav{
-//   position: fixed;
-// }
+
 .search-location{
   background: url('../images/search.jpg') fixed;
-  height: 750px;
+  height: 700px;
   background-repeat: no-repeat;
   background-size: cover;
   .location-search{
     background-color:rgba(0, 0, 0, 0.7);
-    margin-top: 200px;
+    margin-top: 140px;
     color: white;
     font-family: 'Amatica SC', cursive;
     font-size: 30px;
@@ -223,4 +234,14 @@ background-color:rgba(0, 0, 0, 0.4);
 .uploaded-pic{
   width: 500px;
   height: 333px;
+}
+.mobile-navbar{
+  background: black;
+}
+
+#mobilefont{
+  color: gold;
+}
+#mobilefont1-3{
+  color: white;
 }

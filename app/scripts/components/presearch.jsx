@@ -35,7 +35,7 @@ var PreSearchContainer = React.createClass({
     return (
       <div className="container-fluid">
         <div className="row search-location">
-          <div className="nav-head">
+          <div className="nav-head hidden-xs">
             <ul className="nav nav-pills navbar-inverse land-nav">
               <div className="navbar-header">
                 <a id="testing"className="navbar-brand logo testing" href="#landing/">U-Grub</a>
@@ -45,6 +45,25 @@ var PreSearchContainer = React.createClass({
               <li role="presentation"><a className="nav-tabs" href="#presearch/">Search Local Eateries</a></li>
               <li role="presentation"><a onClick={self.logout} className="nav-tabs logout" href="#">Logout</a></li>
             </ul>
+          </div>
+
+          <div className="navbar navbar-default hidden-sm hidden-md hidden-lg">
+            <div className="navbar-header mobile-navbar">
+              <a id="testing" className="navbar-brand logo testing" href="#landing/">U-Grub</a>
+              <a className="navbar-toggle"  data-toggle="collapse" data-target=".navbar-collapse">
+                <span className="icon-bar"></span>
+                <span className="icon-bar"></span>
+                <span className="icon-bar"></span>
+              </a>
+            </div>
+            <div className="navbar-collapse collapse">
+              <ul className="nav navbar-nav mobile-navbar">
+                <li><a id="mobilefont1-3" className="nav-tabs" href="#landing/">HOME</a></li>
+                <li><a id="mobilefont1-3" className="nav-tabs" href="#newpost/">ADD RESTAURANTS</a></li>
+                <li><a id="mobilefont1-3" className="nav-tabs" href="#presearch/">SEARCH LOCAL EATERIES</a></li>
+                <li><a id="mobilefont" className="nav-tabs" href="#">LOGOUT</a></li>
+              </ul>
+            </div>
           </div>
 
           <div >
@@ -58,7 +77,10 @@ var PreSearchContainer = React.createClass({
                   </div>
                 </div>
                 <div className="text-right">
-                  <button type="button" onClick={self.handleLocationChange} className="btn btn-primary btn-lg">Search</button>
+                  <button type="button" onClick={self.handleLocationChange} className="btn btn-primary btn-lg yelp-search">Search</button>
+                </div>
+                <div>
+                  <img className="yelp-logo" src="images/yelp-logo.png" alt="" />
                 </div>
             </div>
           </div>
