@@ -146,12 +146,12 @@ var Login = React.createClass({displayName: "Login",
             ), 
             React.createElement("div", {className: "login-button"}, 
               React.createElement("button", {type: "submit", className: "btn btn-primary"}, "Sign In")
-            )
+            ), React.createElement("br", null)
           )
         )
       ), 
       React.createElement("div", {className: " create-account col-md-6 col-md-offset-3"}, 
-      React.createElement("button", {onClick: this.openModal, type: "button", className: "btn btn-secondary"}, "Don't have an Account? Click here to create one!")
+      React.createElement("button", {onClick: this.openModal, type: "button", className: "btn btn-primary"}, "Don't have an Account? Click here to create one!")
       ), 
       /*MODAL FOR CREATING NEW ACCOUNT*/
       React.createElement(Modal, {className: "account-modal", isOpen: this.state.modalIsOpen}, 
