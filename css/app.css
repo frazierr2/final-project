@@ -5907,7 +5907,6 @@ img {
 
 .search-page {
   background: url("../images/search.jpg") fixed;
-  height: 750px;
   background-repeat: no-repeat;
   background-size: cover; }
   .search-page .yelpframe {
