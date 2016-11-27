@@ -468,7 +468,7 @@ var PreSearchContainer = React.createClass({displayName: "PreSearchContainer",
     return (
       React.createElement("div", {className: "container-fluid"}, 
         React.createElement("div", {className: "row search-location"}, 
-          React.createElement("div", {className: "nav-head"}, 
+          React.createElement("div", {className: "nav-head hidden-xs"}, 
             React.createElement("ul", {className: "nav nav-pills navbar-inverse land-nav"}, 
               React.createElement("div", {className: "navbar-header"}, 
                 React.createElement("a", {id: "testing", className: "navbar-brand logo testing", href: "#landing/"}, "U-Grub")
@@ -477,6 +477,25 @@ var PreSearchContainer = React.createClass({displayName: "PreSearchContainer",
               React.createElement("li", {role: "presentation"}, React.createElement("a", {className: "nav-tabs", href: "#newpost/"}, "Add Restaurant")), 
               React.createElement("li", {role: "presentation"}, React.createElement("a", {className: "nav-tabs", href: "#presearch/"}, "Search Local Eateries")), 
               React.createElement("li", {role: "presentation"}, React.createElement("a", {onClick: self.logout, className: "nav-tabs logout", href: "#"}, "Logout"))
+            )
+          ), 
+
+          React.createElement("div", {className: "navbar navbar-default hidden-sm hidden-md hidden-lg"}, 
+            React.createElement("div", {className: "navbar-header mobile-navbar"}, 
+              React.createElement("a", {id: "testing", className: "navbar-brand logo testing", href: "#landing/"}, "U-Grub"), 
+              React.createElement("a", {className: "navbar-toggle", "data-toggle": "collapse", "data-target": ".navbar-collapse"}, 
+                React.createElement("span", {className: "icon-bar"}), 
+                React.createElement("span", {className: "icon-bar"}), 
+                React.createElement("span", {className: "icon-bar"})
+              )
+            ), 
+            React.createElement("div", {className: "navbar-collapse collapse"}, 
+              React.createElement("ul", {className: "nav navbar-nav mobile-navbar"}, 
+                React.createElement("li", null, React.createElement("a", {id: "mobilefont1-3", className: "nav-tabs", href: "#landing/"}, "HOME")), 
+                React.createElement("li", null, React.createElement("a", {id: "mobilefont1-3", className: "nav-tabs", href: "#newpost/"}, "ADD RESTAURANTS")), 
+                React.createElement("li", null, React.createElement("a", {id: "mobilefont1-3", className: "nav-tabs", href: "#presearch/"}, "SEARCH LOCAL EATERIES")), 
+                React.createElement("li", null, React.createElement("a", {id: "mobilefont", className: "nav-tabs", href: "#"}, "LOGOUT"))
+              )
             )
           ), 
 
@@ -491,7 +510,10 @@ var PreSearchContainer = React.createClass({displayName: "PreSearchContainer",
                   )
                 ), 
                 React.createElement("div", {className: "text-right"}, 
-                  React.createElement("button", {type: "button", onClick: self.handleLocationChange, className: "btn btn-primary btn-lg"}, "Search")
+                  React.createElement("button", {type: "button", onClick: self.handleLocationChange, className: "btn btn-primary btn-lg yelp-search"}, "Search")
+                ), 
+                React.createElement("div", null, 
+                  React.createElement("img", {className: "yelp-logo", src: "images/yelp-logo.png", alt: ""})
                 )
             )
           )
@@ -638,7 +660,12 @@ var SearchListItem = React.createClass({displayName: "SearchListItem",
               React.createElement("div", {className: "well col-md-6 yelpdata"}, business.display_phone)
             ), 
             React.createElement("div", {className: "row"}, 
-              React.createElement("div", {className: "col-md-8 col-md-offset-2 well yelpdata"}, React.createElement("a", {href: business.url}, "Website"))
+              React.createElement("div", {className: "col-md-8 col-md-offset-2 well yelpdata"}, React.createElement("a", {href: business.url}, "Website"), 
+              React.createElement("div", null, 
+                React.createElement("span", {className: "yelp-power"}, "powered by"), 
+                React.createElement("img", {className: "yelp-logo-2", src: "images/yelp-logo.png", alt: ""})
+              )
+              )
             )
           )
         )
@@ -926,7 +953,7 @@ var AddNewTemplate = React.createClass({displayName: "AddNewTemplate",
     return(
       React.createElement("div", {className: "container-fluid "}, 
         React.createElement("div", {className: "row add-new"}, 
-          React.createElement("div", {className: "nav-head"}, 
+          React.createElement("div", {className: "nav-head hidden-xs"}, 
             React.createElement("ul", {className: "nav nav-pills navbar-inverse land-nav"}, 
               React.createElement("div", {className: "navbar-header"}, 
                 React.createElement("a", {id: "testing", className: "navbar-brand logo testing", href: "#landing/"}, "U-Grub")
@@ -936,8 +963,27 @@ var AddNewTemplate = React.createClass({displayName: "AddNewTemplate",
               React.createElement("li", {role: "presentation"}, React.createElement("a", {className: "nav-tabs", href: "#presearch/"}, "Search Local Eateries")), 
               React.createElement("li", {role: "presentation"}, React.createElement("a", {onClick: this.logout, className: "nav-tabs logout", href: "#"}, "Logout"))
             )
-
           ), 
+
+          React.createElement("div", {className: "navbar navbar-default hidden-sm hidden-md hidden-lg"}, 
+            React.createElement("div", {className: "navbar-header mobile-navbar"}, 
+              React.createElement("a", {id: "testing", className: "navbar-brand logo testing", href: "#landing/"}, "U-Grub"), 
+              React.createElement("a", {className: "navbar-toggle", "data-toggle": "collapse", "data-target": ".navbar-collapse"}, 
+                React.createElement("span", {className: "icon-bar"}), 
+                React.createElement("span", {className: "icon-bar"}), 
+                React.createElement("span", {className: "icon-bar"})
+              )
+            ), 
+            React.createElement("div", {className: "navbar-collapse collapse"}, 
+              React.createElement("ul", {className: "nav navbar-nav mobile-navbar"}, 
+                React.createElement("li", null, React.createElement("a", {id: "mobilefont1-3", className: "nav-tabs", href: "#landing/"}, "HOME")), 
+                React.createElement("li", null, React.createElement("a", {id: "mobilefont1-3", className: "nav-tabs", href: "#newpost/"}, "ADD RESTAURANTS")), 
+                React.createElement("li", null, React.createElement("a", {id: "mobilefont1-3", className: "nav-tabs", href: "#presearch/"}, "SEARCH LOCAL EATERIES")), 
+                React.createElement("li", null, React.createElement("a", {id: "mobilefont", className: "nav-tabs", href: "#"}, "LOGOUT"))
+              )
+            )
+          ), 
+
           React.createElement("br", null), 
             this.props.children
         )
@@ -966,7 +1012,7 @@ var DetailTemplate = React.createClass({displayName: "DetailTemplate",
   render: function(){
     return(
       React.createElement("div", {className: "container-fluid restDetail"}, 
-        React.createElement("div", {className: "nav-head"}, 
+        React.createElement("div", {className: "nav-head hidden-xs"}, 
           React.createElement("ul", {className: "nav nav-pills navbar-inverse land-nav"}, 
             React.createElement("div", {className: "navbar-header"}, 
               React.createElement("a", {id: "testing", className: "navbar-brand logo testing", href: "#landing/"}, "U-Grub")
@@ -976,8 +1022,27 @@ var DetailTemplate = React.createClass({displayName: "DetailTemplate",
             React.createElement("li", {role: "presentation"}, React.createElement("a", {className: "nav-tabs", href: "#presearch/"}, "Search Local Eateries")), 
             React.createElement("li", {role: "presentation"}, React.createElement("a", {onClick: this.logout, className: "nav-tabs logout", href: "#"}, "Logout"))
           )
-
         ), 
+
+        React.createElement("div", {className: "navbar navbar-default hidden-sm hidden-md hidden-lg"}, 
+          React.createElement("div", {className: "navbar-header mobile-navbar"}, 
+            React.createElement("a", {id: "testing", className: "navbar-brand logo testing", href: "#landing/"}, "U-Grub"), 
+            React.createElement("a", {className: "navbar-toggle", "data-toggle": "collapse", "data-target": ".navbar-collapse"}, 
+              React.createElement("span", {className: "icon-bar"}), 
+              React.createElement("span", {className: "icon-bar"}), 
+              React.createElement("span", {className: "icon-bar"})
+            )
+          ), 
+          React.createElement("div", {className: "navbar-collapse collapse"}, 
+            React.createElement("ul", {className: "nav navbar-nav mobile-navbar"}, 
+              React.createElement("li", null, React.createElement("a", {id: "mobilefont1-3", className: "nav-tabs", href: "#landing/"}, "HOME")), 
+              React.createElement("li", null, React.createElement("a", {id: "mobilefont1-3", className: "nav-tabs", href: "#newpost/"}, "ADD RESTAURANTS")), 
+              React.createElement("li", null, React.createElement("a", {id: "mobilefont1-3", className: "nav-tabs", href: "#presearch/"}, "SEARCH LOCAL EATERIES")), 
+              React.createElement("li", null, React.createElement("a", {id: "mobilefont", className: "nav-tabs", href: "#"}, "LOGOUT"))
+            )
+          )
+        ), 
+
         React.createElement("br", null), 
         React.createElement("div", {className: "row"}, 
 
@@ -1026,7 +1091,7 @@ var LandingTemplate = React.createClass({displayName: "LandingTemplate",
 
 
           React.createElement("div", {className: "navbar navbar-default hidden-sm hidden-md hidden-lg"}, 
-            React.createElement("div", {className: "navbar-header"}, 
+            React.createElement("div", {className: "navbar-header mobile-navbar"}, 
               React.createElement("a", {id: "testing", className: "navbar-brand logo testing", href: "#landing/"}, "U-Grub"), 
               React.createElement("a", {className: "navbar-toggle", "data-toggle": "collapse", "data-target": ".navbar-collapse"}, 
                 React.createElement("span", {className: "icon-bar"}), 
@@ -1035,11 +1100,11 @@ var LandingTemplate = React.createClass({displayName: "LandingTemplate",
               )
             ), 
             React.createElement("div", {className: "navbar-collapse collapse"}, 
-              React.createElement("ul", {className: "nav navbar-nav"}, 
-                React.createElement("li", null, React.createElement("a", {href: "#landing/"}, "HOME")), 
-                React.createElement("li", null, React.createElement("a", {href: "#newpost/"}, "ADD RESTAURANTS")), 
-                React.createElement("li", null, React.createElement("a", {href: "#presearch/"}, "SEARCH LOCAL EATERIES")), 
-                React.createElement("li", null, React.createElement("a", {href: "#"}, "LOGOUT"))
+              React.createElement("ul", {className: "nav navbar-nav mobile-navbar"}, 
+                React.createElement("li", null, React.createElement("a", {id: "mobilefont1-3", className: "nav-tabs", href: "#landing/"}, "HOME")), 
+                React.createElement("li", null, React.createElement("a", {id: "mobilefont1-3", className: "nav-tabs", href: "#newpost/"}, "ADD RESTAURANTS")), 
+                React.createElement("li", null, React.createElement("a", {id: "mobilefont1-3", className: "nav-tabs", href: "#presearch/"}, "SEARCH LOCAL EATERIES")), 
+                React.createElement("li", null, React.createElement("a", {id: "mobilefont", className: "nav-tabs", href: "#"}, "LOGOUT"))
               )
             )
           ), 
@@ -1139,7 +1204,7 @@ var SearchTemplate = React.createClass({displayName: "SearchTemplate",
   render: function(){
     return(
       React.createElement("div", {className: "container-fluid"}, 
-        React.createElement("div", {className: "nav-head"}, 
+        React.createElement("div", {className: "nav-head hidden-xs"}, 
           React.createElement("ul", {className: "nav nav-pills navbar-inverse land-nav"}, 
             React.createElement("div", {className: "navbar-header"}, 
               React.createElement("a", {id: "testing", className: "navbar-brand logo testing", href: "#landing/"}, "U-Grub")
@@ -1148,6 +1213,25 @@ var SearchTemplate = React.createClass({displayName: "SearchTemplate",
             React.createElement("li", {role: "presentation"}, React.createElement("a", {className: "nav-tabs", href: "#newpost/"}, "Add Restaurant")), 
             React.createElement("li", {role: "presentation"}, React.createElement("a", {className: "nav-tabs", href: "#presearch/"}, "Search Local Eateries")), 
             React.createElement("li", {role: "presentation"}, React.createElement("a", {onClick: this.logout, className: "nav-tabs logout", href: "#"}, "Logout"))
+          )
+        ), 
+
+        React.createElement("div", {className: "navbar navbar-default hidden-sm hidden-md hidden-lg"}, 
+          React.createElement("div", {className: "navbar-header mobile-navbar"}, 
+            React.createElement("a", {id: "testing", className: "navbar-brand logo testing", href: "#landing/"}, "U-Grub"), 
+            React.createElement("a", {className: "navbar-toggle", "data-toggle": "collapse", "data-target": ".navbar-collapse"}, 
+              React.createElement("span", {className: "icon-bar"}), 
+              React.createElement("span", {className: "icon-bar"}), 
+              React.createElement("span", {className: "icon-bar"})
+            )
+          ), 
+          React.createElement("div", {className: "navbar-collapse collapse"}, 
+            React.createElement("ul", {className: "nav navbar-nav mobile-navbar"}, 
+              React.createElement("li", null, React.createElement("a", {id: "mobilefont1-3", className: "nav-tabs", href: "#landing/"}, "HOME")), 
+              React.createElement("li", null, React.createElement("a", {id: "mobilefont1-3", className: "nav-tabs", href: "#newpost/"}, "ADD RESTAURANTS")), 
+              React.createElement("li", null, React.createElement("a", {id: "mobilefont1-3", className: "nav-tabs", href: "#presearch/"}, "SEARCH LOCAL EATERIES")), 
+              React.createElement("li", null, React.createElement("a", {id: "mobilefont", className: "nav-tabs", href: "#"}, "LOGOUT"))
+            )
           )
         ), 
         React.createElement("div", {className: "row"}, 
