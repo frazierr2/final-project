@@ -49,7 +49,7 @@ var LandingTemplate = React.createClass({
 
           <br />
 
-            <div className="row">
+
 
               <div className="col-md-6">
               <div className="col-md-12 well listing-box">
@@ -88,7 +88,7 @@ var LandingTemplate = React.createClass({
                 </div>
               </div>
               </div>
-            </div>
+      
 
         </div>
       </div>

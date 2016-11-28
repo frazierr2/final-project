@@ -6,11 +6,11 @@ var LoginTemplate = React.createClass({
     return (
       <div className="loginscreen">
         <div className="container-fluid ">
-          <div className="row">
+
 
             {this.props.children}
 
-          </div>
+      
         </div>
         </div>
     )

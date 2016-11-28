@@ -83,7 +83,7 @@ var Login = React.createClass({
         </div>
       </div>
       <div className=" create-account col-md-6 col-md-offset-3">
-      <button onClick={this.openModal} type="button" className="btn btn-primary">Don't have an Account&#63; Click here to create one&#33;</button>
+      <button onClick={this.openModal} type="button" className="btn btn-primary create-btn">Don't have an Account&#63; Click here to create one&#33;</button>
       </div>
       {/*MODAL FOR CREATING NEW ACCOUNT*/}
       <Modal className="account-modal"isOpen={this.state.modalIsOpen}>
