@@ -5850,7 +5850,7 @@ img {
   text-align: center;
   font-family: 'Julius Sans One', sans-serif;
   font-weight: bold;
-  font-size: 6.5vw;
+  font-size: 7.0vw;
   color: white;
   text-decoration: underline; }
 
@@ -5866,8 +5866,7 @@ img {
 
 #grubListingInfo {
   text-align: center;
-  color: wheat;
-  font-size: 1.5vw; }
+  color: wheat; }
 
 .restDetail {
   background: url("../images/menu.jpg") fixed;
@@ -5971,4 +5970,5 @@ img {
 
 #mobilefont1-3 {
   color: white; }
+
 /*# sourceMappingURL=app.css.map */
