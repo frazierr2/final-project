@@ -113,7 +113,8 @@ background-color:rgba(0, 0, 0, 0.4);
   text-align: center;
   font-family: 'Julius Sans One', sans-serif;
   font-weight: bold;
-  font-size: 75px;
+  // font-size: 75px;
+  font-size: 6.5vw;
   color: white;
   text-decoration: underline;
 
@@ -130,7 +131,8 @@ background-color:rgba(0, 0, 0, 0.4);
 }
 #grubListingInfo{
   text-align: center;
-  color: white;
+  color: wheat;
+  font-size: 1.5vw;
 }
 .restDetail{
   background: url('../images/menu.jpg') fixed;
