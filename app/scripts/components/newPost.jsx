@@ -136,8 +136,9 @@ var RestaurantForm = React.createClass({
             </div>
             <div>
               <label className="labels" htmlFor="inputFile">To create a new post include a photo!</label><br/>
-              <small id="fileHelp" className="form-text text-muted help-text">PLEASE TAKE AND INCLUDE A PICTURE OF THE RESTAURANT OR MENU TO CREATE A NEW ENTRY</small><br/>
-               <input type="file" className="col-xs-4 form-control-file" id="inputFile" aria-describedby="fileHelp" />
+              <small id="fileHelp" className="form-text text-muted help-text">PLEASE TAKE AND INCLUDE A PICTURE OF THE RESTAURANT OR MENU TO CREATE A NEW ENTRY</small><small className="dontinclude">Upload names cannot contain symples such as &#33;&#38;&#63;&#59;&#64;
+              </small><br/>
+               <input type="file" className="col-md-6 btn btn-primary form-control-file" id="inputFile" aria-describedby="fileHelp" />
             </div>
             <button type="submit" className="btn btn-info btn-lg btn-block form-button">Add Restaurant</button>
           </form>
