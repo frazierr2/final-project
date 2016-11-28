@@ -97,7 +97,6 @@ var Login = React.createClass({displayName: "Login",
     this.setState({password: userPassword});
   },
 
-
   login: function(e){
     e.preventDefault();
 
