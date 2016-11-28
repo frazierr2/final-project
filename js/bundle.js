@@ -12,7 +12,7 @@ var ListItem = React.createClass({displayName: "ListItem",
     render: function(){
       var restaurant = this.props.restaurant;
       return(
-      React.createElement("a", {href: '#restaurant/' + restaurant.get('objectId') + '/'}, React.createElement("h3", {className: "ListHeading well"}, restaurant.get('name')))
+      React.createElement("a", {className: "links", href: '#restaurant/' + restaurant.get('objectId') + '/'}, React.createElement("h3", {className: "ListHeading well"}, restaurant.get('name')))
       )
     }
 });
@@ -377,8 +377,9 @@ var RestaurantForm = React.createClass({displayName: "RestaurantForm",
             ), 
             React.createElement("div", null, 
               React.createElement("label", {className: "labels", htmlFor: "inputFile"}, "To create a new post include a photo!"), React.createElement("br", null), 
-              React.createElement("small", {id: "fileHelp", className: "form-text text-muted help-text"}, "PLEASE TAKE AND INCLUDE A PICTURE OF THE RESTAURANT OR MENU TO CREATE A NEW ENTRY"), React.createElement("br", null), 
-               React.createElement("input", {type: "file", className: "col-xs-4 form-control-file", id: "inputFile", "aria-describedby": "fileHelp"})
+              React.createElement("small", {id: "fileHelp", className: "form-text text-muted help-text"}, "PLEASE TAKE AND INCLUDE A PICTURE OF THE RESTAURANT OR MENU TO CREATE A NEW ENTRY"), React.createElement("small", {className: "dontinclude"}, "Upload names cannot contain symples such as !&?;@"
+              ), React.createElement("br", null), 
+               React.createElement("input", {type: "file", className: "col-md-6 btn btn-primary form-control-file", id: "inputFile", "aria-describedby": "fileHelp"})
             ), 
             React.createElement("button", {type: "submit", className: "btn btn-info btn-lg btn-block form-button"}, "Add Restaurant")
           )
