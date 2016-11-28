@@ -150,7 +150,7 @@ var Login = React.createClass({displayName: "Login",
         )
       ), 
       React.createElement("div", {className: " create-account col-md-6 col-md-offset-3"}, 
-      React.createElement("button", {onClick: this.openModal, type: "button", className: "btn btn-primary"}, "Don't have an Account? Click here to create one!")
+      React.createElement("button", {onClick: this.openModal, type: "button", className: "btn btn-primary create-btn"}, "Don't have an Account? Click here to create one!")
       ), 
       /*MODAL FOR CREATING NEW ACCOUNT*/
       React.createElement(Modal, {className: "account-modal", isOpen: this.state.modalIsOpen}, 
@@ -1110,7 +1110,7 @@ var LandingTemplate = React.createClass({displayName: "LandingTemplate",
 
           React.createElement("br", null), 
 
-            React.createElement("div", {className: "row"}, 
+
 
               React.createElement("div", {className: "col-md-6"}, 
               React.createElement("div", {className: "col-md-12 well listing-box"}, 
@@ -1149,7 +1149,7 @@ var LandingTemplate = React.createClass({displayName: "LandingTemplate",
                 )
               )
               )
-            )
+      
 
         )
       )
@@ -1171,11 +1171,11 @@ var LoginTemplate = React.createClass({displayName: "LoginTemplate",
     return (
       React.createElement("div", {className: "loginscreen"}, 
         React.createElement("div", {className: "container-fluid "}, 
-          React.createElement("div", {className: "row"}, 
+
 
             this.props.children
 
-          )
+      
         )
         )
     )

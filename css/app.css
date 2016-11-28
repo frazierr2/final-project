@@ -5786,6 +5786,9 @@ img {
   text-align: center;
   margin-top: 20px; }
 
+.create-btn {
+  white-space: normal; }
+
 .account-form {
   background-color: rgba(0, 0, 0, 0.75); }
 
@@ -5967,4 +5970,5 @@ img {
 
 #mobilefont1-3 {
   color: white; }
+
 /*# sourceMappingURL=app.css.map */
