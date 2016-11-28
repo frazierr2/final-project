@@ -30,7 +30,6 @@ var Login = React.createClass({
     this.setState({password: userPassword});
   },
 
-
   login: function(e){
     e.preventDefault();
 
