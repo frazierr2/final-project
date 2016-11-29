@@ -1,6 +1,6 @@
 var React = require('react');
-var $ = window.jQuery = require('jquery');
 var Backbone = require('backbone');
+var $ = window.jQuery = require('jquery');
 
 require('bootstrap-sass');
 
