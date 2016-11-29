@@ -11,7 +11,7 @@ U-Grub is a web app that allows you to be your own restaurant critic or simply k
 > there also. Simply go the the Search Local Eateries tab
 > and type in your location and you will be given a list
 > of local restaurants with all the information you will
-> to determine the best place to eat.
+> need to determine the best place to eat.
 
 
 ### Tech Used
