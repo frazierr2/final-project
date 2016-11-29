@@ -1199,8 +1199,9 @@ module.exports = {
 "use strict";
 var React = require('react');
 var Backbone = require('backbone');
-var $ = require('jquery');
+var $ = window.jQuery = require('jquery');
 
+require('bootstrap-sass');
 
 var SearchTemplate = React.createClass({displayName: "SearchTemplate",
   logout: function(){
@@ -1226,13 +1227,14 @@ var SearchTemplate = React.createClass({displayName: "SearchTemplate",
         React.createElement("div", {className: "navbar navbar-default hidden-sm hidden-md hidden-lg"}, 
           React.createElement("div", {className: "navbar-header mobile-navbar"}, 
             React.createElement("a", {id: "testing", className: "navbar-brand logo testing", href: "#landing/"}, "U-Grub"), 
-            React.createElement("a", {className: "navbar-toggle", "data-toggle": "collapse", "data-target": ".navbar-collapse"}, 
+            React.createElement("a", {className: "navbar-toggle", "data-toggle": "collapse", "data-target": "#navbar-button", 
+              "aria-expanded": "false", "aria-controls": "navbar"}, 
               React.createElement("span", {className: "icon-bar"}), 
               React.createElement("span", {className: "icon-bar"}), 
               React.createElement("span", {className: "icon-bar"})
             )
           ), 
-          React.createElement("div", {className: "navbar-collapse collapse"}, 
+          React.createElement("div", {className: "navbar-collapse collapse", id: "navbar-button"}, 
             React.createElement("ul", {className: "nav navbar-nav mobile-navbar"}, 
               React.createElement("li", null, React.createElement("a", {id: "mobilefont1-3", className: "nav-tabs", href: "#landing/"}, "HOME")), 
               React.createElement("li", null, React.createElement("a", {id: "mobilefont1-3", className: "nav-tabs", href: "#newpost/"}, "ADD RESTAURANTS")), 
@@ -1259,7 +1261,7 @@ module.exports = {
   SearchTemplate: SearchTemplate
 }
 
-},{"backbone":17,"jquery":48,"react":197}],17:[function(require,module,exports){
+},{"backbone":17,"bootstrap-sass":18,"jquery":48,"react":197}],17:[function(require,module,exports){
 (function (global){
 //     Backbone.js 1.3.3
 
