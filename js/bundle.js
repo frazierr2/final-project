@@ -1093,13 +1093,13 @@ var LandingTemplate = React.createClass({displayName: "LandingTemplate",
           React.createElement("div", {className: "navbar navbar-default hidden-sm hidden-md hidden-lg"}, 
             React.createElement("div", {className: "navbar-header mobile-navbar"}, 
               React.createElement("a", {id: "testing", className: "navbar-brand logo testing", href: "#landing/"}, "U-Grub"), 
-              React.createElement("a", {className: "navbar-toggle", "data-toggle": "collapse", "data-target": ".navbar-collapse"}, 
+              React.createElement("a", {className: "navbar-toggle", "data-toggle": "collapse", "data-target": "#navbar-button"}, 
                 React.createElement("span", {className: "icon-bar"}), 
                 React.createElement("span", {className: "icon-bar"}), 
                 React.createElement("span", {className: "icon-bar"})
               )
             ), 
-            React.createElement("div", {className: "navbar-collapse collapse"}, 
+            React.createElement("div", {className: "navbar-collapse collapse", id: "navbar-button"}, 
               React.createElement("ul", {className: "nav navbar-nav mobile-navbar"}, 
                 React.createElement("li", null, React.createElement("a", {id: "mobilefont1-3", className: "nav-tabs", href: "#landing/"}, "HOME")), 
                 React.createElement("li", null, React.createElement("a", {id: "mobilefont1-3", className: "nav-tabs", href: "#newpost/"}, "ADD RESTAURANTS")), 
@@ -1150,7 +1150,7 @@ var LandingTemplate = React.createClass({displayName: "LandingTemplate",
                 )
               )
               )
-      
+
 
         )
       )
