@@ -47,6 +47,7 @@ var AddNewTemplate = React.createClass({
           </div>
 
           <br />
+          
             {this.props.children}
         </div>
       </div>
