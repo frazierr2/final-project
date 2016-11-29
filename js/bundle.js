@@ -138,11 +138,11 @@ var Login = React.createClass({displayName: "Login",
           React.createElement("form", {onSubmit: this.login}, 
             React.createElement("div", {className: "form-group"}, 
               React.createElement("label", {className: "label", htmlFor: "username"}, "USERNAME"), 
-              React.createElement("input", {onChange: this.handleUsernameChange, type: "text", className: "form-control input-font", id: "username", placeholder: "Enter Your Username"})
+              React.createElement("input", {onChange: this.handleUsernameChange, type: "text", className: "form-control input-font input", id: "username", placeholder: "Enter Your Username"})
             ), 
             React.createElement("div", {className: "form-group"}, 
               React.createElement("label", {className: "label", htmlFor: "loginPassword"}, "PASSWORD"), 
-              React.createElement("input", {onChange: this.handlePasswordChange, type: "password", className: "form-control input-font", id: "loginPassword", placeholder: "Enter Your Password"})
+              React.createElement("input", {onChange: this.handlePasswordChange, type: "password", className: "form-control input-font input", id: "loginPassword", placeholder: "Enter Your Password"})
             ), 
             React.createElement("div", {className: "login-button"}, 
               React.createElement("button", {type: "submit", className: "btn btn-primary"}, "Sign In")
@@ -161,11 +161,11 @@ var Login = React.createClass({displayName: "Login",
             React.createElement("form", {onSubmit: this.signUp}, 
               React.createElement("div", {className: "form-group"}, 
                 React.createElement("label", {className: "label", htmlFor: "username"}, "USERNAME"), 
-                React.createElement("input", {onChange: this.handleUsernameChange, type: "text", className: "form-control input-font", id: "username", placeholder: "Enter A New Username"})
+                React.createElement("input", {onChange: this.handleUsernameChange, type: "text", className: "form-control input-font input", id: "username", placeholder: "Enter A New Username"})
               ), 
               React.createElement("div", {className: "form-group"}, 
                 React.createElement("label", {className: "label", htmlFor: "loginPassword"}, "PASSWORD"), 
-                React.createElement("input", {onChange: this.handlePasswordChange, type: "password", className: "form-control input-font", id: "loginPassword", placeholder: "Enter A New Password"})
+                React.createElement("input", {onChange: this.handlePasswordChange, type: "password", className: "form-control input-font input", id: "loginPassword", placeholder: "Enter A New Password"})
               ), 
               React.createElement("div", {className: "login-button"}, 
                 React.createElement("button", {type: "submit", className: "btn btn-primary"}, "Create Account")
@@ -332,11 +332,11 @@ var RestaurantForm = React.createClass({displayName: "RestaurantForm",
           React.createElement("form", {onSubmit: self.handleSubmit, action: "/dist/", method: "POST", encType: "multipart/form-data"}, 
             React.createElement("div", {className: "form-group"}, 
               React.createElement("label", {className: "labels", htmlFor: "rest-name"}, "Restaurant Name"), 
-              React.createElement("input", {onChange: self.setRestaurantName, value: self.state.name, type: "text", className: "form-control input-font", id: "rest-name", placeholder: "Where'd you grub?"})
+              React.createElement("input", {onChange: self.setRestaurantName, value: self.state.name, type: "text", className: "form-control input-font input", id: "rest-name", placeholder: "Where'd you grub?"})
             ), 
             React.createElement("div", {className: "col-xs-4"}, 
               React.createElement("label", {className: "labels"}, "Average Cost"), 
-              React.createElement("select", {onChange: self.setRestaurantCost, value: self.state.cost, className: "form-control form-control-lg select-option"}, 
+              React.createElement("select", {onChange: self.setRestaurantCost, value: self.state.cost, className: "form-control form-control-lg select-option input"}, 
                 React.createElement("option", null), 
                 React.createElement("option", null, "$"), 
                 React.createElement("option", null, "$$"), 
@@ -346,7 +346,7 @@ var RestaurantForm = React.createClass({displayName: "RestaurantForm",
             ), 
             React.createElement("div", {className: "col-xs-4"}, 
               React.createElement("label", {className: "labels"}, "Quality of Service"), 
-              React.createElement("select", {onChange: self.setRestaurantQuality, value: self.state.quality, className: "form-control form-control-lg"}, 
+              React.createElement("select", {onChange: self.setRestaurantQuality, value: self.state.quality, className: "form-control form-control-lg input"}, 
                 React.createElement("option", null), 
                 React.createElement("option", null, "Poor"), 
                 React.createElement("option", null, "Below Average"), 
@@ -357,7 +357,7 @@ var RestaurantForm = React.createClass({displayName: "RestaurantForm",
             ), 
             React.createElement("div", {className: "col-xs-4"}, 
               React.createElement("label", {className: "labels"}, "Attend again"), 
-              React.createElement("select", {onChange: self.setRestaurantAttend, value: self.state.attend, className: "form-control form-control-lg select-option"}, 
+              React.createElement("select", {onChange: self.setRestaurantAttend, value: self.state.attend, className: "form-control form-control-lg select-option input"}, 
                 React.createElement("option", null), 
                 React.createElement("option", null, "No"), 
                 React.createElement("option", null, "Yes")
@@ -369,12 +369,12 @@ var RestaurantForm = React.createClass({displayName: "RestaurantForm",
               React.createElement("p", {id: "itemDescription", className: "form-text text-muted"}, 
                 "Enter what you had to eat below seperated by commas."
               ), 
-             React.createElement("input", {id: "foodItem", onChange: self.setRestaurantFood, value: self.state.food, className: "form-control form-control-lg input-font", type: "text", placeholder: "What did you eat?"}), React.createElement("br", null)
+             React.createElement("input", {id: "foodItem", onChange: self.setRestaurantFood, value: self.state.food, className: "form-control form-control-lg input-font input", type: "text", placeholder: "What did you eat?"}), React.createElement("br", null)
             ), 
 
             React.createElement("div", {className: "form-group"}, 
               React.createElement("label", {className: "labels", htmlFor: "additionalinfo"}, "Additional information about your experience"), 
-              React.createElement("textarea", {onChange: self.setRestaurantAdditional, value: self.state.additional, className: "form-control input-font", id: "additionalinfo", placeholder: "Information about your experience", rows: "5"})
+              React.createElement("textarea", {onChange: self.setRestaurantAdditional, value: self.state.additional, className: "form-control input-font input", id: "additionalinfo", placeholder: "Information about your experience", rows: "5"})
             ), 
             React.createElement("div", null, 
               React.createElement("label", {className: "labels", htmlFor: "inputFile"}, "To create a new post include a photo!"), React.createElement("br", null), 
@@ -508,7 +508,7 @@ var PreSearchContainer = React.createClass({displayName: "PreSearchContainer",
                 React.createElement("div", {className: "form-group row"}, 
                   React.createElement("label", {htmlFor: "searchYelp search-input", className: "col-xs-3 col-form-label"}, "Location Search"), 
                   React.createElement("div", {className: "col-xs-8 col-md-offset-1"}, 
-                    React.createElement("input", {className: "form-control input-font yelpSearchInput", type: "search", value: self.state.location, onChange: self.setLocation, placeholder: "Where are you?", id: "searchYelp"})
+                    React.createElement("input", {className: "form-control input-font yelpSearchInput input", type: "search", value: self.state.location, onChange: self.setLocation, placeholder: "Where are you?", id: "searchYelp"})
                   )
                 ), 
                 React.createElement("div", {className: "text-right"}, 

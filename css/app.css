@@ -5812,7 +5812,7 @@ img {
   background-color: rgba(0, 0, 0, 0.6); }
 
 .add-new {
-  background: url("../images/add.jpg") fixed;
+  background: url("../images/add2.jpg") fixed;
   height: 100%;
   background-size: cover;
   background-repeat: no-repeat; }
@@ -5867,7 +5867,8 @@ img {
 .ListHeading:hover {
   background-color: rgba(240, 248, 255, 0.4);
   color: navy;
-  border: 5px solid gold; }
+  border: 5px solid gold;
+  box-shadow: 10px 10px 5px navy; }
 
 .links:hover {
   text-decoration: none; }
@@ -6036,5 +6037,9 @@ img {
 @media (max-width: 450px) {
   .account-modal {
     margin-top: 85px; } }
+.input:focus {
+  outline: none !important;
+  border: 2px solid red;
+  box-shadow: 0 0 10px #719ECE; }
 
 /*# sourceMappingURL=app.css.map */
