@@ -21,9 +21,10 @@ var RestaurantList = React.createClass({
       return <ListItem key={restaurant.cid} restaurant={restaurant}/>
     });
     return(
-      <ul>
-      {restaurantList}
-      </ul>
+        <ul>
+        {restaurantList}
+        </ul>
+
     )
   }
 });

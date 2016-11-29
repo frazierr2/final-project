@@ -3,6 +3,7 @@ var $ = require('jquery');
 var Backbone = require('backbone');
 
 
+
 // var UserModels = require('../models/user.js');
 var models = require('../models/restaurant.js');
 var DetailTemplate = require('../templates/detailTemplate.jsx').DetailTemplate;
@@ -58,7 +59,6 @@ var RestaurantHeading = React.createClass({
             <h3 className="well detailItem-right col-md-6 text-center">{restaurant.get('additional')}</h3>
           </div><br/>
           <div>
-
             <button type="button" onClick={this.handleDelete} className="btn btn-danger btn-lg btn-block"><span className="del-text">DELETE RESTAURANT RECORD</span></button>
           </div>
         </div>
