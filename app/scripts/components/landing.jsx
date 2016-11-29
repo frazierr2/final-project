@@ -10,7 +10,18 @@ var ListItem = React.createClass({
     render: function(){
       var restaurant = this.props.restaurant;
       return(
-      <a className="links" href={'#restaurant/' + restaurant.get('objectId') + '/'}><h3 className="ListHeading well">{restaurant.get('name')}</h3></a>
+          <a className="links" href={'#restaurant/' + restaurant.get('objectId') + '/'}>
+            <div className="row ListHeading well">
+              <div className="col-md-6">
+                <span className="list-head">Name of restaurant:</span>
+                <h3 className="rest-name">{restaurant.get('name')}</h3>
+              </div>
+              <div className="col-md-6">
+                <span className="list-head">Would you attend again&#63;</span>
+                <h3 className="attend-again">{restaurant.get('attend')}</h3>
+              </div>
+          </div>
+        </a>
       )
     }
 });
