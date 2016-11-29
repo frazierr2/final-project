@@ -6002,6 +6002,9 @@ img {
 @media (min-width: 394px) and (max-width: 462px) {
   .select-option {
     margin-top: 20px; } }
+@media (max-width: 315px) {
+  .select-option {
+    margin-top: 20px; } }
 @media (max-width: 390px) {
   .ListHeading {
     font-size: 59px; } }
