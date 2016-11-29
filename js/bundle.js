@@ -170,7 +170,7 @@ var Login = React.createClass({displayName: "Login",
                 React.createElement("button", {type: "submit", className: "btn btn-primary"}, "Create Account")
               ), 
               React.createElement("div", null, 
-                React.createElement("button", {onClick: this.closeModal, type: "button", className: "btn btn-secondary"}, "Cancel")
+                React.createElement("button", {onClick: this.closeModal, type: "button", className: "btn btn-danger"}, "Cancel")
               )
             )
           )
@@ -335,7 +335,7 @@ var RestaurantForm = React.createClass({displayName: "RestaurantForm",
             ), 
             React.createElement("div", {className: "col-xs-4"}, 
               React.createElement("label", {className: "labels"}, "Average Cost"), 
-              React.createElement("select", {onChange: self.setRestaurantCost, value: self.state.cost, className: "form-control form-control-lg"}, 
+              React.createElement("select", {onChange: self.setRestaurantCost, value: self.state.cost, className: "form-control form-control-lg select-option"}, 
                 React.createElement("option", null), 
                 React.createElement("option", null, "$"), 
                 React.createElement("option", null, "$$"), 
@@ -356,7 +356,7 @@ var RestaurantForm = React.createClass({displayName: "RestaurantForm",
             ), 
             React.createElement("div", {className: "col-xs-4"}, 
               React.createElement("label", {className: "labels"}, "Attend again"), 
-              React.createElement("select", {onChange: self.setRestaurantAttend, value: self.state.attend, className: "form-control form-control-lg"}, 
+              React.createElement("select", {onChange: self.setRestaurantAttend, value: self.state.attend, className: "form-control form-control-lg select-option"}, 
                 React.createElement("option", null), 
                 React.createElement("option", null, "No"), 
                 React.createElement("option", null, "Yes")
@@ -533,6 +533,7 @@ var React = require('react');
 var $ = require('jquery');
 var Backbone = require('backbone');
 
+
 // var UserModels = require('../models/user.js');
 var models = require('../models/restaurant.js');
 var DetailTemplate = require('../templates/detailTemplate.jsx').DetailTemplate;
@@ -588,7 +589,8 @@ var RestaurantHeading = React.createClass({displayName: "RestaurantHeading",
             React.createElement("h3", {className: "well detailItem-right col-md-6 text-center"}, restaurant.get('additional'))
           ), React.createElement("br", null), 
           React.createElement("div", null, 
-            React.createElement("button", {type: "button", onClick: this.handleDelete, className: "btn btn-danger btn-lg btn-block"}, "DELETE RESTAURANT RECORD")
+
+            React.createElement("button", {type: "button", onClick: this.handleDelete, className: "btn btn-danger btn-lg btn-block"}, React.createElement("span", {className: "del-text"}, "DELETE RESTAURANT RECORD"))
           )
         )
 
