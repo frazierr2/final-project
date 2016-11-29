@@ -1029,7 +1029,7 @@ var DetailTemplate = React.createClass({displayName: "DetailTemplate",
         React.createElement("div", {className: "navbar navbar-default hidden-sm hidden-md hidden-lg"}, 
           React.createElement("div", {className: "navbar-header mobile-navbar"}, 
             React.createElement("a", {id: "testing", className: "navbar-brand logo testing", href: "#landing/"}, "U-Grub"), 
-            React.createElement("a", {className: "navbar-toggle", "data-toggle": "collapse", "data-target": "#navbar-button", "aria-expanded": "false", "aria-controls": "navbar"}, 
+            React.createElement("button", {className: "navbar-toggle", "data-toggle": "collapse", "data-target": "#navbar-button", "aria-expanded": "false", "aria-controls": "navbar"}, 
               React.createElement("span", {className: "icon-bar"}), 
               React.createElement("span", {className: "icon-bar"}), 
               React.createElement("span", {className: "icon-bar"})
