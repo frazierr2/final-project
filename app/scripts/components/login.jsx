@@ -103,7 +103,7 @@ var Login = React.createClass({
                 <button type="submit" className="btn btn-primary">Create Account</button>
               </div>
               <div>
-                <button onClick={this.closeModal} type="button" className="btn btn-secondary">Cancel</button>
+                <button onClick={this.closeModal} type="button" className="btn btn-danger">Cancel</button>
               </div>
             </form>
           </div>

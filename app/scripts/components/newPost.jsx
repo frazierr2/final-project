@@ -94,7 +94,7 @@ var RestaurantForm = React.createClass({
             </div>
             <div className="col-xs-4">
               <label className="labels">Average Cost</label>
-              <select onChange={self.setRestaurantCost} value={self.state.cost}  className="form-control form-control-lg">
+              <select onChange={self.setRestaurantCost} value={self.state.cost}  className="form-control form-control-lg select-option">
                 <option></option>
                 <option>$</option>
                 <option>$$</option>
@@ -115,7 +115,7 @@ var RestaurantForm = React.createClass({
             </div>
             <div className="col-xs-4">
               <label className="labels">Attend again</label>
-              <select onChange={self.setRestaurantAttend} value={self.state.attend}  className="form-control form-control-lg">
+              <select onChange={self.setRestaurantAttend} value={self.state.attend}  className="form-control form-control-lg select-option">
                 <option></option>
                 <option>No</option>
                 <option>Yes</option>

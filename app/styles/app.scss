@@ -248,6 +248,7 @@ background-color:rgba(0, 0, 0, 0.4);
   width: 500px;
   height: 333px;
 }
+
 .mobile-navbar{
   background: black;
 }
@@ -261,4 +262,43 @@ background-color:rgba(0, 0, 0, 0.4);
 .dontinclude{
   display: block;
   color: white;
+}
+
+@media (max-width: 450px){
+  .uploadbox{
+    width: 300px;
+    height: 250px;
+  }
+  .uploaded-pic{
+    height: 200px;
+  }
+  .del-text{
+    font-size: 15px;
+  }
+  .yelpSearchInput{
+    margin-left: 20px;
+  }
+  .ListHeading{
+    margin-right: 35px;
+  }
+}
+@media (min-width: 394px) and (max-width: 462px){
+  .select-option{
+    margin-top: 20px;
+  }
+}
+@media (max-width: 390px){
+  .ListHeading{
+    font-size: 59px;
+  }
+}
+@media (max-width: 375px){
+  .ListHeading{
+    font-size: 39px;
+  }
+}
+@media (max-width: 450px){
+  .account-modal{
+    margin-top: 85px;
+  }
 }
