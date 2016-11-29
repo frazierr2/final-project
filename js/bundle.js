@@ -1004,6 +1004,7 @@ module.exports = {
 var React = require('react');
 var Backbone = require('backbone');
 var $ = require('jquery');
+require('bootstrap-sass');
 
 var DetailTemplate = React.createClass({displayName: "DetailTemplate",
   logout: function(){
@@ -1060,7 +1061,7 @@ module.exports = {
   DetailTemplate: DetailTemplate
 }
 
-},{"backbone":17,"jquery":48,"react":197}],14:[function(require,module,exports){
+},{"backbone":17,"bootstrap-sass":18,"jquery":48,"react":197}],14:[function(require,module,exports){
 "use strict";
 var React = require('react');
 var Backbone = require('backbone');
