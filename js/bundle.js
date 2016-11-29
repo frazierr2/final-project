@@ -1024,6 +1024,7 @@ var AddNewTemplate = React.createClass({displayName: "AddNewTemplate",
           ), 
 
           React.createElement("br", null), 
+          
             this.props.children
         )
       )
