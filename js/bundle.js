@@ -432,8 +432,8 @@ module.exports = {
 },{"../models/file.js":8,"../models/restaurant.js":9,"../templates/addTemplate.jsx":12,"backbone":17,"jquery":48,"react":197}],4:[function(require,module,exports){
 "use strict";
 var React = require('react');
-var $ = window.jQuery = require('jquery');
 var Backbone = require('backbone');
+var $ = window.jQuery = require('jquery');
 
 require('bootstrap-sass');
 
