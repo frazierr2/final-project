@@ -31,13 +31,13 @@ var LandingTemplate = React.createClass({
           <div className="navbar navbar-default hidden-sm hidden-md hidden-lg">
             <div className="navbar-header mobile-navbar">
               <a id="testing" className="navbar-brand logo testing" href="#landing/">U-Grub</a>
-              <a className="navbar-toggle"  data-toggle="collapse" data-target=".navbar-collapse">
+              <a className="navbar-toggle"  data-toggle="collapse" data-target="#navbar-button">
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
               </a>
             </div>
-            <div className="navbar-collapse collapse">
+            <div className="navbar-collapse collapse" id="navbar-button">
               <ul className="nav navbar-nav mobile-navbar">
                 <li><a id="mobilefont1-3" className="nav-tabs" href="#landing/">HOME</a></li>
                 <li><a id="mobilefont1-3" className="nav-tabs" href="#newpost/">ADD RESTAURANTS</a></li>
@@ -88,7 +88,7 @@ var LandingTemplate = React.createClass({
                 </div>
               </div>
               </div>
-      
+
 
         </div>
       </div>
