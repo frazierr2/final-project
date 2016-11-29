@@ -74,7 +74,7 @@ var PreSearchContainer = React.createClass({
                 <div className="form-group row">
                   <label htmlFor="searchYelp search-input" className="col-xs-3 col-form-label">Location Search</label>
                   <div className="col-xs-8 col-md-offset-1">
-                    <input className="form-control input-font yelpSearchInput" type="search" value={self.state.location} onChange={self.setLocation} placeholder="Where are you?" id="searchYelp" />
+                    <input className="form-control input-font yelpSearchInput input" type="search" value={self.state.location} onChange={self.setLocation} placeholder="Where are you?" id="searchYelp" />
                   </div>
                 </div>
                 <div className="text-right">

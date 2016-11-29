@@ -90,11 +90,11 @@ var RestaurantForm = React.createClass({
           <form onSubmit={self.handleSubmit} action="/dist/" method="POST" encType="multipart/form-data">
             <div className="form-group">
               <label  className="labels"htmlFor="rest-name">Restaurant Name</label>
-              <input onChange={self.setRestaurantName} value={self.state.name} type="text" className="form-control input-font" id="rest-name" placeholder="Where'd you grub?" />
+              <input onChange={self.setRestaurantName} value={self.state.name} type="text" className="form-control input-font input" id="rest-name" placeholder="Where'd you grub?" />
             </div>
             <div className="col-xs-4">
               <label className="labels">Average Cost</label>
-              <select onChange={self.setRestaurantCost} value={self.state.cost}  className="form-control form-control-lg select-option">
+              <select onChange={self.setRestaurantCost} value={self.state.cost}  className="form-control form-control-lg select-option input">
                 <option></option>
                 <option>$</option>
                 <option>$$</option>
@@ -104,7 +104,7 @@ var RestaurantForm = React.createClass({
             </div>
             <div className="col-xs-4">
               <label className="labels">Quality of Service</label>
-              <select onChange={self.setRestaurantQuality} value={self.state.quality}  className="form-control form-control-lg">
+              <select onChange={self.setRestaurantQuality} value={self.state.quality}  className="form-control form-control-lg input">
                 <option></option>
                 <option>Poor</option>
                 <option>Below Average</option>
@@ -115,7 +115,7 @@ var RestaurantForm = React.createClass({
             </div>
             <div className="col-xs-4">
               <label className="labels">Attend again</label>
-              <select onChange={self.setRestaurantAttend} value={self.state.attend}  className="form-control form-control-lg select-option">
+              <select onChange={self.setRestaurantAttend} value={self.state.attend}  className="form-control form-control-lg select-option input">
                 <option></option>
                 <option>No</option>
                 <option>Yes</option>
@@ -127,12 +127,12 @@ var RestaurantForm = React.createClass({
               <p id="itemDescription" className="form-text text-muted">
                 Enter what you had to eat below seperated by commas.
               </p>
-             <input id="foodItem" onChange={self.setRestaurantFood}  value={self.state.food} className="form-control form-control-lg input-font" type="text" placeholder="What did you eat?"/><br/>
+             <input id="foodItem" onChange={self.setRestaurantFood}  value={self.state.food} className="form-control form-control-lg input-font input" type="text" placeholder="What did you eat?"/><br/>
             </div>
 
             <div className="form-group">
               <label className="labels" htmlFor="additionalinfo">Additional information about your experience</label>
-              <textarea onChange={self.setRestaurantAdditional} value={self.state.additional}  className="form-control input-font" id="additionalinfo" placeholder="Information about your experience" rows="5"></textarea>
+              <textarea onChange={self.setRestaurantAdditional} value={self.state.additional}  className="form-control input-font input" id="additionalinfo" placeholder="Information about your experience" rows="5"></textarea>
             </div>
             <div>
               <label className="labels" htmlFor="inputFile">To create a new post include a photo!</label><br/>
