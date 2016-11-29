@@ -23,9 +23,10 @@ var RestaurantList = React.createClass({displayName: "RestaurantList",
       return React.createElement(ListItem, {key: restaurant.cid, restaurant: restaurant})
     });
     return(
-      React.createElement("ul", null, 
-      restaurantList
-      )
+        React.createElement("ul", null, 
+        restaurantList
+        )
+
     )
   }
 });
@@ -533,7 +534,7 @@ module.exports = {
 var React = require('react');
 var $ = require('jquery');
 var Backbone = require('backbone');
-
+var Modal = require('react-modal');
 
 // var UserModels = require('../models/user.js');
 var models = require('../models/restaurant.js');
@@ -547,11 +548,21 @@ $.ajaxSetup({
   }
 });
 var RestaurantHeading = React.createClass({displayName: "RestaurantHeading",
+  getInitialState: function(){
+    return{
+        modalIsOpen: false
+    }
+  },
+  openModal: function() {
+    this.setState({modalIsOpen: true});
+  },
 
+  closeModal: function() {
+    this.setState({modalIsOpen: false});
+  },
   handleDelete: function(){
     var restaurant = this.props.restaurant;
     restaurant.deleteRecipe(restaurant.get('objectId'));
-    alert('Restaurant Record Deleted');
     Backbone.history.navigate('#landing/', {trigger: true});
   },
   render: function(){
@@ -590,8 +601,19 @@ var RestaurantHeading = React.createClass({displayName: "RestaurantHeading",
             React.createElement("h3", {className: "well detailItem-right col-md-6 text-center"}, restaurant.get('additional'))
           ), React.createElement("br", null), 
           React.createElement("div", null, 
-
-            React.createElement("button", {type: "button", onClick: this.handleDelete, className: "btn btn-danger btn-lg btn-block"}, React.createElement("span", {className: "del-text"}, "DELETE RESTAURANT RECORD"))
+            React.createElement("button", {type: "button", onClick: this.openModal, className: "btn btn-danger btn-lg btn-block"}, React.createElement("span", {className: "del-text"}, "DELETE RESTAURANT RECORD")), 
+            React.createElement(Modal, {className: "delete-modal", isOpen: this.state.modalIsOpen}, 
+              React.createElement("h1", {className: "text-center delete-heading"}, "Are you sure ?"), 
+              React.createElement("h3", {className: "text-center delete-heading-2"}, "You wont be able to recover after deleting."), 
+              React.createElement("div", {className: "row"}, 
+                React.createElement("div", {className: "col-xs-6 col-md-6 text-center mod-icon"}, 
+                  React.createElement("i", {onClick: this.closeModal, className: "fa fa-times-circle x-out", "aria-hidden": "true"})
+                ), 
+                React.createElement("div", {className: "col-xs-6 col-md-6 text-center mod-icon"}, 
+                  React.createElement("i", {onClick: this.handleDelete, className: "fa fa-check-circle check-out", "aria-hidden": "true"})
+                )
+              )
+            )
           )
         )
 
@@ -636,7 +658,7 @@ module.exports = {
   RestaurantDetailContainer: RestaurantDetailContainer
 }
 
-},{"../models/restaurant.js":9,"../templates/detailTemplate.jsx":13,"backbone":17,"jquery":48,"react":197}],6:[function(require,module,exports){
+},{"../models/restaurant.js":9,"../templates/detailTemplate.jsx":13,"backbone":17,"jquery":48,"react":197,"react-modal":67}],6:[function(require,module,exports){
 "use strict";
 var React = require('react');
 var Backbone = require('backbone');
