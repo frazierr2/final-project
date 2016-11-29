@@ -432,9 +432,10 @@ module.exports = {
 },{"../models/file.js":8,"../models/restaurant.js":9,"../templates/addTemplate.jsx":12,"backbone":17,"jquery":48,"react":197}],4:[function(require,module,exports){
 "use strict";
 var React = require('react');
-var $ = require('jquery');
+var $ = window.jQuery = require('jquery');
 var Backbone = require('backbone');
 
+require('bootstrap-sass');
 
 
 
@@ -483,13 +484,13 @@ var PreSearchContainer = React.createClass({displayName: "PreSearchContainer",
           React.createElement("div", {className: "navbar navbar-default hidden-sm hidden-md hidden-lg"}, 
             React.createElement("div", {className: "navbar-header mobile-navbar"}, 
               React.createElement("a", {id: "testing", className: "navbar-brand logo testing", href: "#landing/"}, "U-Grub"), 
-              React.createElement("a", {className: "navbar-toggle", "data-toggle": "collapse", "data-target": ".navbar-collapse"}, 
+              React.createElement("button", {className: "navbar-toggle", "data-toggle": "collapse", "data-target": "#navbar-button", "aria-expanded": "false", "aria-controls": "navbar"}, 
                 React.createElement("span", {className: "icon-bar"}), 
                 React.createElement("span", {className: "icon-bar"}), 
                 React.createElement("span", {className: "icon-bar"})
               )
             ), 
-            React.createElement("div", {className: "navbar-collapse collapse"}, 
+            React.createElement("div", {className: "navbar-collapse collapse", id: "navbar-button"}, 
               React.createElement("ul", {className: "nav navbar-nav mobile-navbar"}, 
                 React.createElement("li", null, React.createElement("a", {id: "mobilefont1-3", className: "nav-tabs", href: "#landing/"}, "HOME")), 
                 React.createElement("li", null, React.createElement("a", {id: "mobilefont1-3", className: "nav-tabs", href: "#newpost/"}, "ADD RESTAURANTS")), 
@@ -527,7 +528,7 @@ module.exports = {
   PreSearchContainer: PreSearchContainer
 }
 
-},{"backbone":17,"jquery":48,"react":197}],5:[function(require,module,exports){
+},{"backbone":17,"bootstrap-sass":18,"jquery":48,"react":197}],5:[function(require,module,exports){
 "use strict";
 var React = require('react');
 var $ = require('jquery');
@@ -943,7 +944,9 @@ module.exports = router;
 "use strict";
 var React = require('react');
 var Backbone = require('backbone');
-var $ = require('jquery');
+var $ = window.jQuery = require('jquery');
+
+require('bootstrap-sass');
 
 var AddNewTemplate = React.createClass({displayName: "AddNewTemplate",
   logout: function(){
@@ -970,13 +973,14 @@ var AddNewTemplate = React.createClass({displayName: "AddNewTemplate",
           React.createElement("div", {className: "navbar navbar-default hidden-sm hidden-md hidden-lg"}, 
             React.createElement("div", {className: "navbar-header mobile-navbar"}, 
               React.createElement("a", {id: "testing", className: "navbar-brand logo testing", href: "#landing/"}, "U-Grub"), 
-              React.createElement("a", {className: "navbar-toggle", "data-toggle": "collapse", "data-target": ".navbar-collapse"}, 
+              React.createElement("button", {className: "navbar-toggle", "data-toggle": "collapse", "data-target": "#navbar-button", 
+                "aria-expanded": "false", "aria-controls": "navbar"}, 
                 React.createElement("span", {className: "icon-bar"}), 
                 React.createElement("span", {className: "icon-bar"}), 
                 React.createElement("span", {className: "icon-bar"})
               )
             ), 
-            React.createElement("div", {className: "navbar-collapse collapse"}, 
+            React.createElement("div", {className: "navbar-collapse collapse", id: "navbar-button"}, 
               React.createElement("ul", {className: "nav navbar-nav mobile-navbar"}, 
                 React.createElement("li", null, React.createElement("a", {id: "mobilefont1-3", className: "nav-tabs", href: "#landing/"}, "HOME")), 
                 React.createElement("li", null, React.createElement("a", {id: "mobilefont1-3", className: "nav-tabs", href: "#newpost/"}, "ADD RESTAURANTS")), 
@@ -999,7 +1003,7 @@ module.exports = {
   AddNewTemplate: AddNewTemplate
 }
 
-},{"backbone":17,"jquery":48,"react":197}],13:[function(require,module,exports){
+},{"backbone":17,"bootstrap-sass":18,"jquery":48,"react":197}],13:[function(require,module,exports){
 "use strict";
 var React = require('react');
 var Backbone = require('backbone');
