@@ -5863,6 +5863,17 @@ img {
   color: gold;
   font-size: 60px;
   font-family: 'Reenie Beanie', cursive; }
+  .ListHeading .rest-name {
+    font-size: 60px; }
+
+.attend-again {
+  font-size: 60px; }
+
+.list-head {
+  color: white;
+  font-size: 20px;
+  text-decoration: underline;
+  font-family: 'Josefin Slab', serif; }
 
 .ListHeading:hover {
   background-color: rgba(240, 248, 255, 0.4);

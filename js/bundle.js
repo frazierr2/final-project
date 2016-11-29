@@ -12,7 +12,18 @@ var ListItem = React.createClass({displayName: "ListItem",
     render: function(){
       var restaurant = this.props.restaurant;
       return(
-      React.createElement("a", {className: "links", href: '#restaurant/' + restaurant.get('objectId') + '/'}, React.createElement("h3", {className: "ListHeading well"}, restaurant.get('name')))
+          React.createElement("a", {className: "links", href: '#restaurant/' + restaurant.get('objectId') + '/'}, 
+            React.createElement("div", {className: "row ListHeading well"}, 
+              React.createElement("div", {className: "col-md-6"}, 
+                React.createElement("span", {className: "list-head"}, "Name of restaurant:"), 
+                React.createElement("h3", {className: "rest-name"}, restaurant.get('name'))
+              ), 
+              React.createElement("div", {className: "col-md-6"}, 
+                React.createElement("span", {className: "list-head"}, "Would you attend again?"), 
+                React.createElement("h3", {className: "attend-again"}, restaurant.get('attend'))
+              )
+          )
+        )
       )
     }
 });
