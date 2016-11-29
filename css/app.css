@@ -5862,7 +5862,8 @@ img {
   background-color: rgba(0, 0, 0, 0.5);
   color: gold;
   font-size: 60px;
-  font-family: 'Reenie Beanie', cursive; }
+  font-family: 'Reenie Beanie', cursive;
+  margin-right: 20px; }
   .ListHeading .rest-name {
     font-size: 60px; }
 

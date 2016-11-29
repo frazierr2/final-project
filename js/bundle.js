@@ -19,7 +19,7 @@ var ListItem = React.createClass({displayName: "ListItem",
                 React.createElement("h3", {className: "rest-name"}, restaurant.get('name'))
               ), 
               React.createElement("div", {className: "col-md-6"}, 
-                React.createElement("span", {className: "list-head"}, "Would you attend again?"), 
+                React.createElement("span", {className: "list-head"}, "Attend again?"), 
                 React.createElement("h3", {className: "attend-again"}, restaurant.get('attend'))
               )
           )
