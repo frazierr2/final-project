@@ -1166,7 +1166,7 @@ var LandingTemplate = React.createClass({displayName: "LandingTemplate",
               )
               ), 
 
-              React.createElement("div", {className: "col-md-6"}, 
+              React.createElement("div", {className: "col-md-6 col-md-offset-6 right-col"}, 
               React.createElement("div", {className: "col-md-12 well col-right"}, 
                 React.createElement("div", {className: "col-md-6 well-sm"}, 
                 React.createElement("div", {className: "col-md-12 well well-sm pictures"}, 

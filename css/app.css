@@ -6037,6 +6037,9 @@ img {
 .mod-icon {
   font-size: 17.0vw; }
 
+@media (min-width: 992px) {
+  .right-col {
+    position: fixed; } }
 @media (max-width: 450px) {
   .uploadbox {
     width: 300px;
