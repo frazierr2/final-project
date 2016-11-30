@@ -32,6 +32,7 @@ img {
 }
 .formbox{
 background-color:rgba(0, 0, 0, 0.4);
+border: 3px solid white;
 }
 .create-account{
  text-align: center;
@@ -64,9 +65,14 @@ background-color:rgba(0, 0, 0, 0.4);
 .pictures{
   background-color: white;
 }
+.pictures:hover{
+  background-color: gold;
+  box-shadow: 10px 10px 5px navy;
+}
 .addform{
   margin-top: 30px;
-  background-color:rgba(0, 0, 0, 0.6);
+  background-color:rgba(100, 100, 100, 0.9);
+  border: 4px solid lightblue;
 }
 .add-new{
   background: url('../images/add2.jpg') fixed;
@@ -145,14 +151,20 @@ background-color:rgba(0, 0, 0, 0.4);
 .ListHeading:hover{
   background-color:rgba(240,248,255, 0.4);
   color: navy;
-  border: 5px solid gold;
+  border: 3px solid gold;
   box-shadow: 10px 10px 5px navy;
 }
 .links:hover{
   text-decoration: none;
 }
+.singleword{
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
 #grubListingInfo{
   text-align: center;
+  font-size: 17px;
   color: wheat;
 }
 .restDetail{
@@ -171,8 +183,8 @@ background-color:rgba(0, 0, 0, 0.4);
   color: white;
 }
 .detail{
-  // margin-top: 70px;
-  background-color:rgba(100, 100, 100, 0.3);
+  border: 3px solid white;
+  background-color:rgba(100, 100, 100, 0.9);
   .detailItem-left{
     text-decoration: underline;
     text-transform: uppercase;
@@ -218,7 +230,8 @@ background-color:rgba(0, 0, 0, 0.4);
   background-size: cover;
 
   .yelpframe{
-    background-color:rgba(100, 100, 100, 0.8);
+    background-color:rgba(100, 100, 100, 0.9);
+    border: 3px solid white;
   }
   .yelpgroup{
     background-color:rgba(0, 0, 0, 0.5);
@@ -230,8 +243,12 @@ background-color:rgba(0, 0, 0, 0.4);
     font-family: 'Amatica SC', cursive;
     font-size: 30px;
   }
+  .website-link{
+    color: gold;
+  }
 
 }
+
 
 .search-location{
   background: url('../images/search.jpg') fixed;
@@ -245,6 +262,7 @@ background-color:rgba(0, 0, 0, 0.4);
     font-family: 'Amatica SC', cursive;
     font-size: 30px;
     font-weight: bolder;
+    border: 4px solid white;
   }
   .search-input{
     vertical-align: middle;
@@ -278,7 +296,9 @@ background-color:rgba(0, 0, 0, 0.4);
 }
 
 .delete-modal{
-  background-color: #fffff0;
+  background-color: #F0F8FF;
+  width: 80%;
+  margin: 0 auto;
 }
 .delete-heading{
   font-family: 'Quantico', sans-serif;
@@ -350,6 +370,6 @@ background-color:rgba(0, 0, 0, 0.4);
 
 .input:focus {
     outline: none !important;
-    border:2px solid red;
-    box-shadow: 0 0 10px #719ECE;
+    border:3px solid red;
+    box-shadow: 0 0 50px #719ECE;
 }

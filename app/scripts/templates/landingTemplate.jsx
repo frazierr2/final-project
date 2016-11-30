@@ -55,7 +55,7 @@ var LandingTemplate = React.createClass({
               <div className="col-md-12 well listing-box">
                 <h1 className="col-left">Grub Listing</h1>
                   <p id="grubListingInfo" className="form-text text-muted">
-                    To get your restaurant information simply click on the name below!
+                    To get your restaurant information simply <span className="singleword">click</span> on the box below!
                   </p>
 
                 {this.props.children}

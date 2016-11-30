@@ -23,7 +23,7 @@ var SearchListItem = React.createClass({
               <div className="well col-md-6 yelpdata">{business.display_phone}</div>
             </div>
             <div className="row">
-              <div className="col-md-8 col-md-offset-2 well yelpdata"><a  href={business.url}>Website</a>
+              <div className="col-md-8 col-md-offset-2 well yelpdata"><a  href={business.url}><span className="website-link">Website</span></a>
               <div>
                 <span className="yelp-power">powered by</span>
                 <img className="yelp-logo-2" src="images/yelp-logo.png" alt="" />

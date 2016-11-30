@@ -71,7 +71,7 @@ var RestaurantHeading = React.createClass({
             <button type="button" onClick={this.openModal}  className="btn btn-danger btn-lg btn-block"><span className="del-text">DELETE RESTAURANT RECORD</span></button>
             <Modal className="delete-modal" isOpen={this.state.modalIsOpen}>
               <h1 className="text-center delete-heading">Are you sure &#63;</h1>
-              <h3 className="text-center delete-heading-2">You wont be able to recover after deleting.</h3>
+              <h3 className="text-center delete-heading-2">You won&#39;t be able to recover after deleting.</h3>
               <div className="row">
                 <div className="col-xs-6 col-md-6 text-center mod-icon">
                   <i onClick={this.closeModal} className="fa fa-times-circle x-out" aria-hidden="true"></i>
