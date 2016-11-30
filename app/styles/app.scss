@@ -113,7 +113,7 @@ border: 3px solid white;
   background: url('../images/background.jpeg') fixed;
 }
 .col-right{
-  background-color:rgba(0, 0, 0, 0.3)
+  background-color:rgba(0, 0, 0, 0.3);
 }
 .col-left{
   text-align: center;
@@ -322,6 +322,11 @@ border: 3px solid white;
 .mod-icon{
   // font-size: 200px;
   font-size: 17.0vw;
+}
+@media(min-width: 992px){
+  .right-col{
+    position: fixed;
+  }
 }
 
 @media (max-width: 450px){

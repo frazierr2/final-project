@@ -63,7 +63,7 @@ var LandingTemplate = React.createClass({
               </div>
               </div>
 
-              <div className="col-md-6">
+              <div className="col-md-6 col-md-offset-6 right-col">
               <div className="col-md-12 well col-right">
                 <div className="col-md-6 well-sm">
                 <div className="col-md-12 well well-sm pictures">
