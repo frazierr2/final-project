@@ -5780,7 +5780,8 @@ img {
   margin-top: 200px; }
 
 .formbox {
-  background-color: rgba(0, 0, 0, 0.4); }
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 3px solid white; }
 
 .create-account {
   text-align: center;
@@ -5807,9 +5808,14 @@ img {
 .pictures {
   background-color: white; }
 
+.pictures:hover {
+  background-color: gold;
+  box-shadow: 10px 10px 5px navy; }
+
 .addform {
   margin-top: 30px;
-  background-color: rgba(0, 0, 0, 0.6); }
+  background-color: rgba(100, 100, 100, 0.9);
+  border: 4px solid lightblue; }
 
 .add-new {
   background: url("../images/add2.jpg") fixed;
@@ -5879,14 +5885,20 @@ img {
 .ListHeading:hover {
   background-color: rgba(240, 248, 255, 0.4);
   color: navy;
-  border: 5px solid gold;
+  border: 3px solid gold;
   box-shadow: 10px 10px 5px navy; }
 
 .links:hover {
   text-decoration: none; }
 
+.singleword {
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase; }
+
 #grubListingInfo {
   text-align: center;
+  font-size: 17px;
   color: wheat; }
 
 .restDetail {
@@ -5905,7 +5917,8 @@ img {
   color: white; }
 
 .detail {
-  background-color: rgba(100, 100, 100, 0.3); }
+  border: 3px solid white;
+  background-color: rgba(100, 100, 100, 0.9); }
   .detail .detailItem-left {
     text-decoration: underline;
     text-transform: uppercase;
@@ -5948,7 +5961,8 @@ img {
   background-repeat: no-repeat;
   background-size: cover; }
   .search-page .yelpframe {
-    background-color: rgba(100, 100, 100, 0.8); }
+    background-color: rgba(100, 100, 100, 0.9);
+    border: 3px solid white; }
   .search-page .yelpgroup {
     background-color: rgba(0, 0, 0, 0.5); }
   .search-page .yelpdata {
@@ -5957,6 +5971,8 @@ img {
     text-align: center;
     font-family: 'Amatica SC', cursive;
     font-size: 30px; }
+  .search-page .website-link {
+    color: gold; }
 
 .search-location {
   background: url("../images/search.jpg") fixed;
@@ -5969,7 +5985,8 @@ img {
     color: white;
     font-family: 'Amatica SC', cursive;
     font-size: 30px;
-    font-weight: bolder; }
+    font-weight: bolder;
+    border: 4px solid white; }
   .search-location .search-input {
     vertical-align: middle; }
   .search-location .yelpSearchInput {
@@ -5997,7 +6014,9 @@ img {
   color: white; }
 
 .delete-modal {
-  background-color: #fffff0; }
+  background-color: #F0F8FF;
+  width: 80%;
+  margin: 0 auto; }
 
 .delete-heading {
   font-family: 'Quantico', sans-serif;
@@ -6051,7 +6070,7 @@ img {
     margin-top: 85px; } }
 .input:focus {
   outline: none !important;
-  border: 2px solid red;
-  box-shadow: 0 0 10px #719ECE; }
+  border: 3px solid red;
+  box-shadow: 0 0 50px #719ECE; }
 
 /*# sourceMappingURL=app.css.map */

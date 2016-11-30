@@ -615,7 +615,7 @@ var RestaurantHeading = React.createClass({displayName: "RestaurantHeading",
             React.createElement("button", {type: "button", onClick: this.openModal, className: "btn btn-danger btn-lg btn-block"}, React.createElement("span", {className: "del-text"}, "DELETE RESTAURANT RECORD")), 
             React.createElement(Modal, {className: "delete-modal", isOpen: this.state.modalIsOpen}, 
               React.createElement("h1", {className: "text-center delete-heading"}, "Are you sure ?"), 
-              React.createElement("h3", {className: "text-center delete-heading-2"}, "You wont be able to recover after deleting."), 
+              React.createElement("h3", {className: "text-center delete-heading-2"}, "You won't be able to recover after deleting."), 
               React.createElement("div", {className: "row"}, 
                 React.createElement("div", {className: "col-xs-6 col-md-6 text-center mod-icon"}, 
                   React.createElement("i", {onClick: this.closeModal, className: "fa fa-times-circle x-out", "aria-hidden": "true"})
@@ -696,7 +696,7 @@ var SearchListItem = React.createClass({displayName: "SearchListItem",
               React.createElement("div", {className: "well col-md-6 yelpdata"}, business.display_phone)
             ), 
             React.createElement("div", {className: "row"}, 
-              React.createElement("div", {className: "col-md-8 col-md-offset-2 well yelpdata"}, React.createElement("a", {href: business.url}, "Website"), 
+              React.createElement("div", {className: "col-md-8 col-md-offset-2 well yelpdata"}, React.createElement("a", {href: business.url}, React.createElement("span", {className: "website-link"}, "Website")), 
               React.createElement("div", null, 
                 React.createElement("span", {className: "yelp-power"}, "powered by"), 
                 React.createElement("img", {className: "yelp-logo-2", src: "images/yelp-logo.png", alt: ""})
@@ -1158,7 +1158,7 @@ var LandingTemplate = React.createClass({displayName: "LandingTemplate",
               React.createElement("div", {className: "col-md-12 well listing-box"}, 
                 React.createElement("h1", {className: "col-left"}, "Grub Listing"), 
                   React.createElement("p", {id: "grubListingInfo", className: "form-text text-muted"}, 
-                    "To get your restaurant information simply click on the name below!"
+                    "To get your restaurant information simply ", React.createElement("span", {className: "singleword"}, "click"), " on the box below!"
                   ), 
 
                 this.props.children
