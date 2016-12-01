@@ -14,6 +14,10 @@ U-Grub is a web app that allows you to be your own restaurant critic or simply k
 > need to determine the best place to eat.
 
 
+### Link to U-Grub Web App
+which is located [HERE]
+
+
 ### Tech Used
 
 During the development of this app I used the following tech:
@@ -36,10 +40,6 @@ I used the following API's in the development of U-Grub
 * [Parse Server] for CRUD Development
 * Yelp's [Search API] v2 for searching restaurants here and wide
 
-
-
-### Link to U-Grub Web App
-which is located [HERE]
 
 ### Some screenshot images of the web app
 ![Login Page](app/images/screenshots/ss1.png "Login Page")
