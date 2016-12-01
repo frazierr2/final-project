@@ -41,8 +41,10 @@ I used the following API's in the development of U-Grub
 ### Link to U-Grub Web App
 which is located [HERE]
 
-
+### Some screenshot images of the web app
 ![Login Page](app/images/screenshots/ss1.png "Login Page")
+![Landing Page](app/images/screenshots/ss2.png "Landing Page")
+![Detail Page](app/images/screenshots/ss3.png "Detail Page")
 
 
    [Twitter Bootstrap]: <http://twitter.github.com/bootstrap/>
