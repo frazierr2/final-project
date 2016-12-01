@@ -42,6 +42,8 @@ I used the following API's in the development of U-Grub
 which is located [HERE]
 
 
+![Login Page](images/screenshots/ss1.png "Login Page")
+
 
    [Twitter Bootstrap]: <http://twitter.github.com/bootstrap/>
    [jQuery]: <http://jquery.com>
