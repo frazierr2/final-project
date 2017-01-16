@@ -16,7 +16,8 @@ U-Grub is a web app that allows you to be your own restaurant critic or simply k
 
 ### Link to U-Grub Web App
 which is located [HERE]
-
+>To log into the app and look around and see how it works you can use Username: guest and password: guest
+>It may take a second or two for the server to boot up once trying to log in. After its up and running things will be able to move around freely.
 
 ### Tech Used
 
