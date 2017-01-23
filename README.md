@@ -38,8 +38,8 @@ During the development of this app I used the following tech:
 ### API's
 
 I used the following API's in the development of U-Grub:
-* [Parse Server] for CRUD Development
-* Yelp's [Search API] v2 for searching restaurants here and wide
+* [Parse Server] for CRUD Development.
+* Yelp's [Search API] v2 for searching restaurants here and wide.
 
 
 ### Some screenshot images of the web app
